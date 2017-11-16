@@ -8,13 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		FCB7082A1FBDCD9A0094A903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB708291FBDCD9A0094A903 /* AppDelegate.m */; };
-		FCB7082D1FBDCD9A0094A903 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB7082C1FBDCD9A0094A903 /* ViewController.m */; };
 		FCB708301FBDCD9A0094A903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB7082E1FBDCD9A0094A903 /* Main.storyboard */; };
 		FCB708321FBDCD9A0094A903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCB708311FBDCD9A0094A903 /* Assets.xcassets */; };
 		FCB708351FBDCD9A0094A903 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB708331FBDCD9A0094A903 /* LaunchScreen.storyboard */; };
 		FCB708381FBDCD9A0094A903 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB708371FBDCD9A0094A903 /* main.m */; };
 		FCB708421FBDCD9A0094A903 /* AdvancedUISDKUseAgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB708411FBDCD9A0094A903 /* AdvancedUISDKUseAgeTests.m */; };
 		FCB7084D1FBDCD9A0094A903 /* AdvancedUISDKUseAgeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB7084C1FBDCD9A0094A903 /* AdvancedUISDKUseAgeUITests.m */; };
+		FCB7085C1FBDDB110094A903 /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB7085B1FBDDB110094A903 /* BaseNavViewController.m */; };
+		FCB7085F1FBDDB320094A903 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB7085E1FBDDB320094A903 /* BaseTabBarController.m */; };
+		FCB708631FBDDC790094A903 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB708621FBDDC790094A903 /* BaseViewController.m */; };
+		FCB708671FBDDCB30094A903 /* Item0ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB708651FBDDCB30094A903 /* Item0ViewController.m */; };
+		FCB708681FBDDCB30094A903 /* Item0ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB708661FBDDCB30094A903 /* Item0ViewController.xib */; };
+		FCB7086C1FBDDCC30094A903 /* Item1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB7086A1FBDDCC30094A903 /* Item1ViewController.m */; };
+		FCB7086D1FBDDCC30094A903 /* Item1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB7086B1FBDDCC30094A903 /* Item1ViewController.xib */; };
+		FCB708711FBDDCD00094A903 /* Item2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB7086F1FBDDCD00094A903 /* Item2ViewController.m */; };
+		FCB708721FBDDCD00094A903 /* Item2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB708701FBDDCD00094A903 /* Item2ViewController.xib */; };
+		FCB708761FBDDCDE0094A903 /* Item3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB708741FBDDCDE0094A903 /* Item3ViewController.m */; };
+		FCB708771FBDDCDE0094A903 /* Item3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB708751FBDDCDE0094A903 /* Item3ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +48,6 @@
 		FCB708251FBDCD9A0094A903 /* AdvancedUISDKUseAge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedUISDKUseAge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB708281FBDCD9A0094A903 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FCB708291FBDCD9A0094A903 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FCB7082B1FBDCD9A0094A903 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FCB7082C1FBDCD9A0094A903 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FCB7082F1FBDCD9A0094A903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCB708311FBDCD9A0094A903 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCB708341FBDCD9A0094A903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +59,25 @@
 		FCB708481FBDCD9A0094A903 /* AdvancedUISDKUseAgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvancedUISDKUseAgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB7084C1FBDCD9A0094A903 /* AdvancedUISDKUseAgeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvancedUISDKUseAgeUITests.m; sourceTree = "<group>"; };
 		FCB7084E1FBDCD9A0094A903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCB7085A1FBDDB110094A903 /* BaseNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
+		FCB7085B1FBDDB110094A903 /* BaseNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
+		FCB7085D1FBDDB320094A903 /* BaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		FCB7085E1FBDDB320094A903 /* BaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		FCB708611FBDDC790094A903 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		FCB708621FBDDC790094A903 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		FCB708641FBDDCB30094A903 /* Item0ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Item0ViewController.h; sourceTree = "<group>"; };
+		FCB708651FBDDCB30094A903 /* Item0ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Item0ViewController.m; sourceTree = "<group>"; };
+		FCB708661FBDDCB30094A903 /* Item0ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Item0ViewController.xib; sourceTree = "<group>"; };
+		FCB708691FBDDCC30094A903 /* Item1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Item1ViewController.h; sourceTree = "<group>"; };
+		FCB7086A1FBDDCC30094A903 /* Item1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Item1ViewController.m; sourceTree = "<group>"; };
+		FCB7086B1FBDDCC30094A903 /* Item1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Item1ViewController.xib; sourceTree = "<group>"; };
+		FCB7086E1FBDDCD00094A903 /* Item2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Item2ViewController.h; sourceTree = "<group>"; };
+		FCB7086F1FBDDCD00094A903 /* Item2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Item2ViewController.m; sourceTree = "<group>"; };
+		FCB708701FBDDCD00094A903 /* Item2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Item2ViewController.xib; sourceTree = "<group>"; };
+		FCB708731FBDDCDE0094A903 /* Item3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Item3ViewController.h; sourceTree = "<group>"; };
+		FCB708741FBDDCDE0094A903 /* Item3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Item3ViewController.m; sourceTree = "<group>"; };
+		FCB708751FBDDCDE0094A903 /* Item3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Item3ViewController.xib; sourceTree = "<group>"; };
+		FCB708791FBDDF7B0094A903 /* config.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +130,9 @@
 			children = (
 				FCB708281FBDCD9A0094A903 /* AppDelegate.h */,
 				FCB708291FBDCD9A0094A903 /* AppDelegate.m */,
-				FCB7082B1FBDCD9A0094A903 /* ViewController.h */,
-				FCB7082C1FBDCD9A0094A903 /* ViewController.m */,
+				FCB7087A1FBDDF810094A903 /* CommonShared */,
+				FCB708781FBDDCE80094A903 /* ItemVC */,
+				FCB708601FBDDB440094A903 /* Base */,
 				FCB7082E1FBDCD9A0094A903 /* Main.storyboard */,
 				FCB708311FBDCD9A0094A903 /* Assets.xcassets */,
 				FCB708331FBDCD9A0094A903 /* LaunchScreen.storyboard */,
@@ -130,6 +158,46 @@
 				FCB7084E1FBDCD9A0094A903 /* Info.plist */,
 			);
 			path = AdvancedUISDKUseAgeUITests;
+			sourceTree = "<group>";
+		};
+		FCB708601FBDDB440094A903 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FCB7085A1FBDDB110094A903 /* BaseNavViewController.h */,
+				FCB7085B1FBDDB110094A903 /* BaseNavViewController.m */,
+				FCB7085D1FBDDB320094A903 /* BaseTabBarController.h */,
+				FCB7085E1FBDDB320094A903 /* BaseTabBarController.m */,
+				FCB708611FBDDC790094A903 /* BaseViewController.h */,
+				FCB708621FBDDC790094A903 /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FCB708781FBDDCE80094A903 /* ItemVC */ = {
+			isa = PBXGroup;
+			children = (
+				FCB708641FBDDCB30094A903 /* Item0ViewController.h */,
+				FCB708651FBDDCB30094A903 /* Item0ViewController.m */,
+				FCB708661FBDDCB30094A903 /* Item0ViewController.xib */,
+				FCB708691FBDDCC30094A903 /* Item1ViewController.h */,
+				FCB7086A1FBDDCC30094A903 /* Item1ViewController.m */,
+				FCB7086B1FBDDCC30094A903 /* Item1ViewController.xib */,
+				FCB7086E1FBDDCD00094A903 /* Item2ViewController.h */,
+				FCB7086F1FBDDCD00094A903 /* Item2ViewController.m */,
+				FCB708701FBDDCD00094A903 /* Item2ViewController.xib */,
+				FCB708731FBDDCDE0094A903 /* Item3ViewController.h */,
+				FCB708741FBDDCDE0094A903 /* Item3ViewController.m */,
+				FCB708751FBDDCDE0094A903 /* Item3ViewController.xib */,
+			);
+			path = ItemVC;
+			sourceTree = "<group>";
+		};
+		FCB7087A1FBDDF810094A903 /* CommonShared */ = {
+			isa = PBXGroup;
+			children = (
+				FCB708791FBDDF7B0094A903 /* config.pch */,
+			);
+			path = CommonShared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,8 +306,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB708721FBDDCD00094A903 /* Item2ViewController.xib in Resources */,
+				FCB708771FBDDCDE0094A903 /* Item3ViewController.xib in Resources */,
+				FCB7086D1FBDDCC30094A903 /* Item1ViewController.xib in Resources */,
 				FCB708351FBDCD9A0094A903 /* LaunchScreen.storyboard in Resources */,
 				FCB708321FBDCD9A0094A903 /* Assets.xcassets in Resources */,
+				FCB708681FBDDCB30094A903 /* Item0ViewController.xib in Resources */,
 				FCB708301FBDCD9A0094A903 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +337,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCB7082D1FBDCD9A0094A903 /* ViewController.m in Sources */,
+				FCB708711FBDDCD00094A903 /* Item2ViewController.m in Sources */,
+				FCB7086C1FBDDCC30094A903 /* Item1ViewController.m in Sources */,
+				FCB7085F1FBDDB320094A903 /* BaseTabBarController.m in Sources */,
+				FCB708761FBDDCDE0094A903 /* Item3ViewController.m in Sources */,
+				FCB708631FBDDC790094A903 /* BaseViewController.m in Sources */,
+				FCB708671FBDDCB30094A903 /* Item0ViewController.m in Sources */,
+				FCB7085C1FBDDB110094A903 /* BaseNavViewController.m in Sources */,
 				FCB708381FBDCD9A0094A903 /* main.m in Sources */,
 				FCB7082A1FBDCD9A0094A903 /* AppDelegate.m in Sources */,
 			);
@@ -432,6 +510,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ML9NWM8SSX;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AdvancedUISDKUseAge/CommonShared/config.pch";
 				INFOPLIST_FILE = AdvancedUISDKUseAge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kong.AdvancedUISDKUseAge;
@@ -446,6 +525,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ML9NWM8SSX;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AdvancedUISDKUseAge/CommonShared/config.pch";
 				INFOPLIST_FILE = AdvancedUISDKUseAge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kong.AdvancedUISDKUseAge;
