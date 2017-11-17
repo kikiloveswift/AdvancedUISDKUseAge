@@ -8,30 +8,81 @@
 
 #import "Item0ViewController.h"
 
-@interface Item0ViewController ()
+@interface Item0ViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *mTableView;
+
+@property (nonatomic, copy) NSArray *dataArr;
 
 @end
+
+static NSString *identifyItm0 = @"identifyItm0";
 
 @implementation Item0ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self initData];
+    [self initUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)initData
+{
+    _dataArr = @[@"DynamicVC"];
+}
+- (void)initUI
+{
+    _mTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, KWidth, KHeight - 64-49) style:UITableViewStylePlain];
+    _mTableView.delegate = self;
+    _mTableView.dataSource = self;
+    _mTableView.rowHeight = 50.0f;
+    _mTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:_mTableView];
 }
 
-/*
-#pragma mark - Navigation
+#pragma Mark -UITableViewDelegate
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _dataArr.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifyItm0];
+    if (!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifyItm0];
+    }
+    cell.textLabel.text = _dataArr[indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row)
+    {
+        case 0:
+        {
+            Class CLS = NSClassFromString(@"DynamicViewController");
+            id vc = [CLS new];
+            if ([vc isKindOfClass:[UIViewController class]])
+            {
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
 
 @end

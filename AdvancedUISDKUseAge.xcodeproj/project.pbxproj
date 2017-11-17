@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6101C84A7830EE8F63F23597 /* libPods-AdvancedUISDKUseAge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 209A9D1B772ADD67EF1F35C8 /* libPods-AdvancedUISDKUseAge.a */; };
+		FC21DD151FBED20F0003903A /* DynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC21DD131FBED20F0003903A /* DynamicViewController.m */; };
+		FC21DD161FBED20F0003903A /* DynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC21DD141FBED20F0003903A /* DynamicViewController.xib */; };
 		FCB7082A1FBDCD9A0094A903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB708291FBDCD9A0094A903 /* AppDelegate.m */; };
 		FCB708301FBDCD9A0094A903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB7082E1FBDCD9A0094A903 /* Main.storyboard */; };
 		FCB708321FBDCD9A0094A903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCB708311FBDCD9A0094A903 /* Assets.xcassets */; };
@@ -51,6 +53,11 @@
 		FC21DD0D1FBECD6A0003903A /* AFNetReqCls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNetReqCls.m; sourceTree = "<group>"; };
 		FC21DD0E1FBECD880003903A /* NSString+MD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		FC21DD0F1FBECD880003903A /* NSString+MD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		FC21DD101FBECE2D0003903A /* header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = header.h; sourceTree = "<group>"; };
+		FC21DD111FBECE430003903A /* defineDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = defineDocument.h; sourceTree = "<group>"; };
+		FC21DD121FBED20F0003903A /* DynamicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicViewController.h; sourceTree = "<group>"; };
+		FC21DD131FBED20F0003903A /* DynamicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicViewController.m; sourceTree = "<group>"; };
+		FC21DD141FBED20F0003903A /* DynamicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DynamicViewController.xib; sourceTree = "<group>"; };
 		FCB708251FBDCD9A0094A903 /* AdvancedUISDKUseAge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedUISDKUseAge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB708281FBDCD9A0094A903 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FCB708291FBDCD9A0094A903 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -127,6 +134,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FC21DD171FBED2160003903A /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				FC21DD121FBED20F0003903A /* DynamicViewController.h */,
+				FC21DD131FBED20F0003903A /* DynamicViewController.m */,
+				FC21DD141FBED20F0003903A /* DynamicViewController.xib */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		FCB7081C1FBDCD9A0094A903 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +171,7 @@
 			children = (
 				FCB708281FBDCD9A0094A903 /* AppDelegate.h */,
 				FCB708291FBDCD9A0094A903 /* AppDelegate.m */,
+				FC21DD171FBED2160003903A /* VC */,
 				FCB7087A1FBDDF810094A903 /* CommonShared */,
 				FCB708781FBDDCE80094A903 /* ItemVC */,
 				FCB708601FBDDB440094A903 /* Base */,
@@ -222,6 +240,8 @@
 				FC21DD0E1FBECD880003903A /* NSString+MD5.h */,
 				FC21DD0F1FBECD880003903A /* NSString+MD5.m */,
 				FCB708791FBDDF7B0094A903 /* config.pch */,
+				FC21DD101FBECE2D0003903A /* header.h */,
+				FC21DD111FBECE430003903A /* defineDocument.h */,
 			);
 			path = CommonShared;
 			sourceTree = "<group>";
@@ -339,6 +359,7 @@
 				FCB7086D1FBDDCC30094A903 /* Item1ViewController.xib in Resources */,
 				FCB708351FBDCD9A0094A903 /* LaunchScreen.storyboard in Resources */,
 				FCB708321FBDCD9A0094A903 /* Assets.xcassets in Resources */,
+				FC21DD161FBED20F0003903A /* DynamicViewController.xib in Resources */,
 				FCB708681FBDDCB30094A903 /* Item0ViewController.xib in Resources */,
 				FCB708301FBDCD9A0094A903 /* Main.storyboard in Resources */,
 			);
@@ -419,6 +440,7 @@
 				FCB708631FBDDC790094A903 /* BaseViewController.m in Sources */,
 				FCB708671FBDDCB30094A903 /* Item0ViewController.m in Sources */,
 				FCB7085C1FBDDB110094A903 /* BaseNavViewController.m in Sources */,
+				FC21DD151FBED20F0003903A /* DynamicViewController.m in Sources */,
 				FCB708381FBDCD9A0094A903 /* main.m in Sources */,
 				FCB7082A1FBDCD9A0094A903 /* AppDelegate.m in Sources */,
 			);
