@@ -8,10 +8,13 @@
 
 typedef void(^ComPletedBlock)(void);
 #import "DynamicViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface DynamicViewController ()
+@interface DynamicViewController ()<UICollisionBehaviorDelegate>
 {
     UIDynamicAnimator *_animator;
+    UIImageView *_imgViewRuiWen;
+    UIImageView *_imgViewzlc;
 }
 
 
@@ -29,18 +32,30 @@ typedef void(^ComPletedBlock)(void);
     UISwitch *s = [[UISwitch alloc] initWithFrame:CGRectMake(0, 80, 80, 40)];
     [s addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:s];
+    
+    _imgViewRuiWen = [[UIImageView alloc] initWithFrame:CGRectMake(100, 64, 300, 200)];
+    _imgViewRuiWen.image = [UIImage imageNamed:@"ruiwen.jpg"];
+    [self.view addSubview:_imgViewRuiWen];
+    
+    _imgViewzlc = [[UIImageView alloc] initWithFrame:CGRectMake(100, KHeight - 200, 80, 120)];
+    _imgViewzlc.image = [UIImage imageNamed:@"zlc.jpeg"];
+    [self.view addSubview:_imgViewzlc];
 }
 
 - (void)addAdmation:(void(^)(BOOL isFinish))finishBlock
 {
-    UIImageView *imgViewRuiWen = [[UIImageView alloc] initWithFrame:CGRectMake(100, 64, 300, 200)];
-    imgViewRuiWen.image = [UIImage imageNamed:@"ruiwen.jpg"];
-    [self.view addSubview:imgViewRuiWen];
-    UIGravityBehavior *gBehavior = [[UIGravityBehavior alloc] initWithItems:@[imgViewRuiWen]];
+    
+    UIGravityBehavior *gBehavior = [[UIGravityBehavior alloc] initWithItems:@[_imgViewRuiWen,_imgViewzlc]];
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
 
-    
+    //添加碰撞
+    UICollisionBehavior *collisionBehavior = [[UICollisionBehavior alloc] initWithItems:@[_imgViewRuiWen,_imgViewzlc]];
+    [collisionBehavior setCollisionMode:UICollisionBehaviorModeBoundaries];
+    collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
+    [_animator addBehavior: collisionBehavior];
     [_animator addBehavior:gBehavior];
+    
+    UIDynamicItemBehavior
     
     if (finishBlock) {
         finishBlock(YES);
@@ -51,10 +66,14 @@ typedef void(^ComPletedBlock)(void);
     if (s.on)
     {
         NSLock *lock = [NSLock new];
-//        [lock lock];
+        [lock lock];
         [self addAdmation:^(BOOL isFinish) {
-//            [lock unlock];
+            [lock unlock];
         }];
+    }
+    else
+    {
+        _imgViewRuiWen.frame = CGRectMake(100, 64, 300, 200);
     }
 }
 
