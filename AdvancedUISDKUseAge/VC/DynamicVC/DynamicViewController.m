@@ -26,6 +26,11 @@ typedef void(^ComPletedBlock)(void);
     [self initUI];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
 - (void)initUI
 {
     UISwitch *s = [[UISwitch alloc] initWithFrame:CGRectMake(0, 80, 80, 40)];
@@ -36,6 +41,8 @@ typedef void(^ComPletedBlock)(void);
     _imgViewRuiWen.contentMode = UIViewContentModeScaleAspectFill;
     _imgViewRuiWen.image = [UIImage imageNamed:@"ruiwen.jpg"];
     [self.view addSubview:_imgViewRuiWen];
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panAction:)];
+    [self.view addGestureRecognizer:pan];
     
     _imgViewzlc = [[UIImageView alloc] initWithFrame:CGRectMake(100, KHeight - 200, 100, 100)];
     _imgViewzlc.image = [UIImage imageNamed:@"zlc.jpeg"];
@@ -43,10 +50,15 @@ typedef void(^ComPletedBlock)(void);
     [self.view addSubview:_imgViewzlc];
 }
 
+- (void)panAction:(UIPanGestureRecognizer *)pan
+{
+    CGPoint point = [pan locationInView:self.view];
+    
+    _imgViewRuiWen.center = point;
+}
 - (void)addAdmation:(void(^)(BOOL isFinish))finishBlock
 {
     [self addAttachAnimation];
-    
     
     if (finishBlock) {
         finishBlock(YES);
@@ -65,7 +77,7 @@ typedef void(^ComPletedBlock)(void);
     }
     else
     {
-        _imgViewRuiWen.frame = CGRectMake((KWidth - 100)/2, (KHeight - 100)/2, 100, 100);
+        _imgViewRuiWen.frame = CGRectMake((KWidth - 100)/2, (KHeight - 100)/2 - 200, 100, 100);
     }
 }
 
@@ -78,7 +90,7 @@ typedef void(^ComPletedBlock)(void);
     //    gBehavior.gravityDirection = CGVectorMake(sqrt(3), 1); // 以1/√3 = tan(a) a = 30°
     
     [gBehavior setAngle:90*3.14/180.0];// Angel是弧度，度数 * π/180° = 弧度
-    [gBehavior setMagnitude:8]; //大小，与运动速度有关
+    [gBehavior setMagnitude:7]; //大小，与运动速度有关
     NSLog(@"dx = %.1f,dy = %.1f",gBehavior.gravityDirection.dx,gBehavior.gravityDirection.dy);
     /*
      总结关系:
@@ -95,11 +107,18 @@ typedef void(^ComPletedBlock)(void);
 
 - (void)addAttachAnimation
 {
-    UIAttachmentBehavior *attachBehavior = [[UIAttachmentBehavior alloc] initWithItem:_imgViewRuiWen attachedToAnchor:_imgViewzlc.center];
+    [self addGravityAnimation];
+    UIAttachmentBehavior *attachBehavior = [[UIAttachmentBehavior alloc] initWithItem:_imgViewRuiWen attachedToAnchor:_imgViewRuiWen.center];
     attachBehavior.damping = 0.5;
-    attachBehavior.length = 800;
+    attachBehavior.length = 50;
     attachBehavior.frequency = 1;
-    [_animator addBehavior:attachBehavior];
+    UIDynamicItemBehavior *itemBehavior = [[UIDynamicItemBehavior alloc] initWithItems:@[_imgViewRuiWen]];
+    itemBehavior.elasticity = 0.5;
+    itemBehavior.allowsRotation = YES;
+    [itemBehavior addAngularVelocity:0.4 forItem:_imgViewRuiWen];
+    
+    [_animator addBehavior:itemBehavior];
+//    [_animator addBehavior:attachBehavior];
 }
 
 

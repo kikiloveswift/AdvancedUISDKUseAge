@@ -29,11 +29,11 @@ static NSString *identifyItm0 = @"identifyItm0";
 
 - (void)initData
 {
-    _dataArr = @[@"DynamicVC"];
+    _dataArr = @[@"DynamicViewController",@"KeyFrameViewController"];
 }
 - (void)initUI
 {
-    _mTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, KWidth, KHeight - 64-49) style:UITableViewStylePlain];
+    _mTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KWidth, KHeight -49) style:UITableViewStylePlain];
     _mTableView.delegate = self;
     _mTableView.dataSource = self;
     _mTableView.rowHeight = 50.0f;
@@ -46,6 +46,16 @@ static NSString *identifyItm0 = @"identifyItm0";
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50.0;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return nil;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -67,21 +77,13 @@ static NSString *identifyItm0 = @"identifyItm0";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    switch (indexPath.row)
+    
+    NSString *clsStr = _dataArr[indexPath.row];
+    Class CLS = NSClassFromString(clsStr);
+    id vc = [CLS new];
+    if ([vc isKindOfClass:[UIViewController class]])
     {
-        case 0:
-        {
-            Class CLS = NSClassFromString(@"DynamicViewController");
-            id vc = [CLS new];
-            if ([vc isKindOfClass:[UIViewController class]])
-            {
-                [self.navigationController pushViewController:vc animated:YES];
-            }
-        }
-            break;
-            
-        default:
-            break;
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

@@ -26,6 +26,8 @@
 		FCB7086D1FBDDCC30094A903 /* Item1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB7086B1FBDDCC30094A903 /* Item1ViewController.xib */; };
 		FCB708711FBDDCD00094A903 /* Item2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB7086F1FBDDCD00094A903 /* Item2ViewController.m */; };
 		FCB708721FBDDCD00094A903 /* Item2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB708701FBDDCD00094A903 /* Item2ViewController.xib */; };
+		FCFD32561FC7E87900B6476E /* KeyFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFD32541FC7E87900B6476E /* KeyFrameViewController.m */; };
+		FCFD32571FC7E87900B6476E /* KeyFrameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFD32551FC7E87900B6476E /* KeyFrameViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,9 @@
 		FCB708701FBDDCD00094A903 /* Item2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Item2ViewController.xib; sourceTree = "<group>"; };
 		FCB708731FBDDCDE0094A903 /* Item3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Item3ViewController.h; sourceTree = "<group>"; };
 		FCB708791FBDDF7B0094A903 /* config.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.pch; sourceTree = "<group>"; };
+		FCFD32531FC7E87900B6476E /* KeyFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyFrameViewController.h; sourceTree = "<group>"; };
+		FCFD32541FC7E87900B6476E /* KeyFrameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyFrameViewController.m; sourceTree = "<group>"; };
+		FCFD32551FC7E87900B6476E /* KeyFrameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyFrameViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,9 +142,8 @@
 		FC21DD171FBED2160003903A /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				FC21DD121FBED20F0003903A /* DynamicViewController.h */,
-				FC21DD131FBED20F0003903A /* DynamicViewController.m */,
-				FC21DD141FBED20F0003903A /* DynamicViewController.xib */,
+				FCFD32521FC7E84F00B6476E /* DynamicVC */,
+				FCFD32581FC7E87F00B6476E /* KeyFrameVC */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -244,6 +248,26 @@
 				FC21DD111FBECE430003903A /* defineDocument.h */,
 			);
 			path = CommonShared;
+			sourceTree = "<group>";
+		};
+		FCFD32521FC7E84F00B6476E /* DynamicVC */ = {
+			isa = PBXGroup;
+			children = (
+				FC21DD121FBED20F0003903A /* DynamicViewController.h */,
+				FC21DD131FBED20F0003903A /* DynamicViewController.m */,
+				FC21DD141FBED20F0003903A /* DynamicViewController.xib */,
+			);
+			path = DynamicVC;
+			sourceTree = "<group>";
+		};
+		FCFD32581FC7E87F00B6476E /* KeyFrameVC */ = {
+			isa = PBXGroup;
+			children = (
+				FCFD32531FC7E87900B6476E /* KeyFrameViewController.h */,
+				FCFD32541FC7E87900B6476E /* KeyFrameViewController.m */,
+				FCFD32551FC7E87900B6476E /* KeyFrameViewController.xib */,
+			);
+			path = KeyFrameVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +385,7 @@
 				FCB708321FBDCD9A0094A903 /* Assets.xcassets in Resources */,
 				FC21DD161FBED20F0003903A /* DynamicViewController.xib in Resources */,
 				FCB708681FBDDCB30094A903 /* Item0ViewController.xib in Resources */,
+				FCFD32571FC7E87900B6476E /* KeyFrameViewController.xib in Resources */,
 				FCB708301FBDCD9A0094A903 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFD32561FC7E87900B6476E /* KeyFrameViewController.m in Sources */,
 				FCB708711FBDDCD00094A903 /* Item2ViewController.m in Sources */,
 				FCB7086C1FBDDCC30094A903 /* Item1ViewController.m in Sources */,
 				FCB7085F1FBDDB320094A903 /* BaseTabBarController.m in Sources */,
@@ -610,6 +636,7 @@
 				DEVELOPMENT_TEAM = ML9NWM8SSX;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AdvancedUISDKUseAge/CommonShared/config.pch";
 				INFOPLIST_FILE = AdvancedUISDKUseAge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kong.AdvancedUISDKUseAge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -626,6 +653,7 @@
 				DEVELOPMENT_TEAM = ML9NWM8SSX;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AdvancedUISDKUseAge/CommonShared/config.pch";
 				INFOPLIST_FILE = AdvancedUISDKUseAge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kong.AdvancedUISDKUseAge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
