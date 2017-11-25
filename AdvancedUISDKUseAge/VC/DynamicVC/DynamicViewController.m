@@ -12,6 +12,7 @@ typedef void(^ComPletedBlock)(void);
 @interface DynamicViewController ()<UICollisionBehaviorDelegate>
 {
     UIDynamicAnimator *_animator;
+    UIDynamicAnimator *_animatorNew;
     UIImageView *_imgViewRuiWen;
     UIImageView *_imgViewzlc;
 }
@@ -23,13 +24,114 @@ typedef void(^ComPletedBlock)(void);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initUI];
+//    [self initUI];
+    [self initAnimatior];
+//    [self initLayer]; 失败
+    [self initUIView];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
 }
+
+- (void)initUIView
+{
+    UIView *greenView = [[UIView alloc] initWithFrame:CGRectMake((KWidth -100)/2, 80, 100, 100)];
+    greenView.backgroundColor = [UIColor greenColor];
+    greenView.layer.cornerRadius = 10;
+    [self.view addSubview:greenView];
+    
+    UIView *cirView = [UIView new];
+    cirView.backgroundColor = [UIColor redColor];
+    cirView.frame = CGRectMake((KWidth -100)/2, 80, 100, 100);
+    CAShapeLayer *slayer = [CAShapeLayer layer];
+    slayer.path = [self bezierPath].CGPath;
+    cirView.layer.mask = slayer;
+    [self.view addSubview:cirView];
+    [self addAnimation:greenView View:cirView];
+}
+
+
+
+- (void)initLayer
+{
+    CALayer *layer = [CALayer layer];
+    layer.frame = CGRectMake((KWidth -100)/2, 80, 100, 100);
+    layer.cornerRadius = 10;
+    layer.backgroundColor = [UIColor greenColor].CGColor;
+    [self.view.layer addSublayer:layer];
+    
+    CAShapeLayer *slayer = [CAShapeLayer layer];
+    slayer.path = [self bezierPath].CGPath;
+    slayer.fillColor = [UIColor redColor].CGColor;
+    slayer.strokeColor = [UIColor brownColor].CGColor;
+    [self.view.layer addSublayer:slayer];
+    
+}
+
+- (UIBezierPath *)bezierPath
+{
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(50, 0)];
+    [path addLineToPoint:CGPointMake(0, 100)];
+    [path addLineToPoint:CGPointMake(100, 100)];
+    [path closePath];
+    return path;
+}
+
+- (void)initAnimatior
+{
+    _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    _animatorNew = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+}
+
+- (void)addAnimation:(UIView *)v1 View:(UIView *)v2
+{
+    //重力
+    UIGravityBehavior *gravity1 = [[UIGravityBehavior alloc] initWithItems:@[v1]];
+    //修改重力参数 Vector就是向量 二维坐标系的向量  angle 倾斜角 magnitude = Vy
+    gravity1.gravityDirection = CGVectorMake(0.1, 0.1);
+    
+    UIGravityBehavior *gravity2 = [[UIGravityBehavior alloc] initWithItems:@[v2]];
+    gravity2.gravityDirection = CGVectorMake(-0.1, 0.1);
+    
+    [_animator addBehavior:gravity1];
+    [_animatorNew addBehavior:gravity2];
+    
+    //添加边界反弹
+    UICollisionBehavior *collisionBehavior1 = [[UICollisionBehavior alloc] initWithItems:@[v1]];
+    collisionBehavior1.translatesReferenceBoundsIntoBoundary = YES;
+    [collisionBehavior1 setCollisionMode:UICollisionBehaviorModeBoundaries];
+    [_animator addBehavior:collisionBehavior1];
+    
+    UICollisionBehavior *collisionBehavior2 = [[UICollisionBehavior alloc] initWithItems:@[v2]];
+    collisionBehavior2.translatesReferenceBoundsIntoBoundary = YES;
+    [collisionBehavior2 setCollisionMode:UICollisionBehaviorModeBoundaries];
+    [_animatorNew addBehavior:collisionBehavior2];
+    
+    //为V1添加动态效果
+    UIDynamicItemBehavior *itemBehavior = [[UIDynamicItemBehavior alloc] initWithItems:@[v1]];
+    //弹性碰撞
+    itemBehavior.elasticity = 1;
+    //摩擦力
+    itemBehavior.friction = 6;
+    //密度
+    itemBehavior.density = 0.8;
+    //减震
+    itemBehavior.resistance = 0.9;
+    //角速度
+    itemBehavior.angularResistance = 0;
+    
+    if (@available(iOS 9.0, *)) {
+        itemBehavior.charge = 0;
+    }
+    itemBehavior.allowsRotation = YES;
+    [_animator addBehavior:itemBehavior];
+    
+}
+
+
 
 - (void)initUI
 {
@@ -102,7 +204,6 @@ typedef void(^ComPletedBlock)(void);
     collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
     [_animator addBehavior: collisionBehavior];
     [_animator addBehavior:gBehavior];
-
 }
 
 - (void)addAttachAnimation

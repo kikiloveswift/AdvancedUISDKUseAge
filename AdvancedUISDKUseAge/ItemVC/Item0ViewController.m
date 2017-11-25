@@ -55,7 +55,16 @@ static NSString *identifyItm0 = @"identifyItm0";
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    return nil;
+    UIView *v = [UIView new];
+    v.frame = CGRectZero;
+    return v;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *v = [UIView new];
+    v.frame = CGRectZero;
+    return v;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
