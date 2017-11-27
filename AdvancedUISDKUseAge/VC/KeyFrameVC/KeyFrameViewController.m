@@ -11,67 +11,89 @@
 
 @interface KeyFrameViewController ()<CAAnimationDelegate>
 
-@property (nonatomic, strong) CAShapeLayer *layer;
+@property (nonatomic, strong) CAShapeLayer *trackLayer;
 
-@property (nonatomic, strong) UIBezierPath *bpath;
+@property (nonatomic, strong) CAShapeLayer *ballLayer;
 
-@property (nonatomic, strong) CAShapeLayer *slayer;
 @end
 
 @implementation KeyFrameViewController
+{
+    UIBezierPath *bPathLine;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.title = @"KeyFrame";
-    [self initUI];
+    [self initCALayer];
 }
 
-- (void)initUI
+- (void)initCALayer
 {
-    _layer = [CAShapeLayer layer];
-    _layer.frame = CGRectMake(20, 200, 300, 400);
-    _bpath = [UIBezierPath bezierPath];
-    CGPoint p1 = CGPointMake(20, 400);
-    [_bpath moveToPoint:p1];
-
-    CGPoint p2 = CGPointMake(220, 400);
-    [_bpath addLineToPoint:p2];
-
-    _layer.lineWidth = 5.0f;
-    _layer.fillColor = [UIColor clearColor].CGColor;
-    _layer.strokeColor = [UIColor redColor].CGColor;
+    //画布
+    _trackLayer = [CAShapeLayer layer];
+    _trackLayer.frame = CGRectZero;
     
-    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(220, 300) radius:100 startAngle:-M_PI endAngle:M_PI/2 clockwise:YES];
-    [_bpath appendPath:path];
-    _layer.path = _bpath.CGPath;
-    [self.view.layer addSublayer:_layer];
+    //path1
+    bPathLine = [UIBezierPath bezierPath];
+    [bPathLine moveToPoint:CGPointMake(20, 400)];
+    [bPathLine addLineToPoint:CGPointMake(270, 400)];
     
-    _slayer = [CAShapeLayer layer];
-    _slayer.frame = CGRectMake(20, 400, 10, 10);
-    UIBezierPath *b1path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(0, 0) radius:10 startAngle:0 endAngle:M_PI*2 clockwise:YES];
-    _slayer.path = b1path.CGPath;
-    _slayer.fillColor = [UIColor orangeColor].CGColor;
-    _slayer.strokeColor = [UIColor orangeColor].CGColor;
-    [self.view.layer addSublayer:_slayer];
-
+    UIBezierPath *bPathOval = [UIBezierPath bezierPathWithArcCenter:CGPointMake(270, 300) radius:100 startAngle:-M_PI endAngle:M_PI/2 clockwise:YES];
+    [bPathLine appendPath:[bPathOval bezierPathByReversingPath]];
+    _trackLayer.path = bPathLine.CGPath;
+    _trackLayer.strokeColor = [UIColor greenColor].CGColor;
+    _trackLayer.fillColor = [UIColor clearColor].CGColor;
+    _trackLayer.lineWidth = 5.0f;
+//    _trackLayer
+    [self.view.layer addSublayer:_trackLayer];
+    
+    _ballLayer = [CAShapeLayer layer];
+//    _ballLayer.frame = CGRectZero;
+    _ballLayer.frame = CGRectMake(20, 400, 0, 0);
+    
+    UIBezierPath *bPathBall = [UIBezierPath bezierPathWithArcCenter:CGPointMake(0, 0) radius:10 startAngle:0 endAngle:M_PI*2 clockwise:YES];
+    _ballLayer.fillColor = [UIColor orangeColor].CGColor;
+    _ballLayer.strokeColor = [UIColor clearColor].CGColor;
+    _ballLayer.path = bPathBall.CGPath;
+    
+    [self.view.layer addSublayer:_ballLayer];
+    
+    
 }
+
 
 - (IBAction)beginLoading:(UIButton *)sender
 {
+    CABasicAnimation *animationStrokeEnd = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    animationStrokeEnd.toValue = @1;
+    animationStrokeEnd.fromValue = @0.001;
+    animationStrokeEnd.duration = 2.0f;
+    animationStrokeEnd.autoreverses = YES;
+    animationStrokeEnd.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [_trackLayer addAnimation:animationStrokeEnd forKey:@"animationStrokeEnd"];
     
+    CABasicAnimation *animationStrokeColor = [CABasicAnimation animationWithKeyPath:@"strokeColor"];
+    animationStrokeColor.duration = 2.0f;
+    animationStrokeColor.autoreverses = YES;
+    animationStrokeColor.fromValue = (id)[UIColor clearColor].CGColor;
+    animationStrokeColor.toValue = (id)[UIColor redColor].CGColor;
+    animationStrokeColor.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    [_trackLayer addAnimation:animationStrokeColor forKey:@"animationStrokeColor"];
     
+//    CAKeyframeAnimation * path2StrokeColorAnim = [CAKeyframeAnimation animationWithKeyPath:@"strokeColor"];
+//    path2StrokeColorAnim.values   = @[(id)[UIColor colorWithRed:1 green: 0.205 blue:0.226 alpha:1].CGColor,(id)[UIColor colorWithRed:0.132 green: 0.745 blue:0.155 alpha:1].CGColor];
+//    path2StrokeColorAnim.keyTimes = @[@0, @1];
+//    path2StrokeColorAnim.duration = 1;
     
-    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-    
-//    animation.delegate = self;
-    animation.path = _bpath.CGPath;
-    animation.duration = 5;
-    animation.autoreverses = YES;
-    
-    
-    
-    [_slayer addAnimation:animation forKey:@"position"];
+    CAKeyframeAnimation *animationPosition = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    animationPosition.path = bPathLine.CGPath;
+    animationPosition.duration = 2.0f;
+    animationPosition.autoreverses = YES;
+    animationPosition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    animationPosition.calculationMode = kCAAnimationPaced;
+    [_ballLayer addAnimation:animationPosition forKey:@"animationPosition"];
 
 }
 
