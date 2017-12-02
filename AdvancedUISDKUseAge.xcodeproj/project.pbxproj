@@ -10,6 +10,8 @@
 		6101C84A7830EE8F63F23597 /* libPods-AdvancedUISDKUseAge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 209A9D1B772ADD67EF1F35C8 /* libPods-AdvancedUISDKUseAge.a */; };
 		FC21DD151FBED20F0003903A /* DynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC21DD131FBED20F0003903A /* DynamicViewController.m */; };
 		FC21DD161FBED20F0003903A /* DynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC21DD141FBED20F0003903A /* DynamicViewController.xib */; };
+		FC8402FC1FD27DF700B540E0 /* BerKeyFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8402FA1FD27DF700B540E0 /* BerKeyFrameViewController.m */; };
+		FC8402FD1FD27DF700B540E0 /* BerKeyFrameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC8402FB1FD27DF700B540E0 /* BerKeyFrameViewController.xib */; };
 		FCB7082A1FBDCD9A0094A903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB708291FBDCD9A0094A903 /* AppDelegate.m */; };
 		FCB708301FBDCD9A0094A903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB7082E1FBDCD9A0094A903 /* Main.storyboard */; };
 		FCB708321FBDCD9A0094A903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCB708311FBDCD9A0094A903 /* Assets.xcassets */; };
@@ -60,6 +62,9 @@
 		FC21DD121FBED20F0003903A /* DynamicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicViewController.h; sourceTree = "<group>"; };
 		FC21DD131FBED20F0003903A /* DynamicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicViewController.m; sourceTree = "<group>"; };
 		FC21DD141FBED20F0003903A /* DynamicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DynamicViewController.xib; sourceTree = "<group>"; };
+		FC8402F91FD27DF700B540E0 /* BerKeyFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BerKeyFrameViewController.h; sourceTree = "<group>"; };
+		FC8402FA1FD27DF700B540E0 /* BerKeyFrameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BerKeyFrameViewController.m; sourceTree = "<group>"; };
+		FC8402FB1FD27DF700B540E0 /* BerKeyFrameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BerKeyFrameViewController.xib; sourceTree = "<group>"; };
 		FCB708251FBDCD9A0094A903 /* AdvancedUISDKUseAge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedUISDKUseAge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB708281FBDCD9A0094A903 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FCB708291FBDCD9A0094A903 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -144,8 +149,19 @@
 			children = (
 				FCFD32521FC7E84F00B6476E /* DynamicVC */,
 				FCFD32581FC7E87F00B6476E /* KeyFrameVC */,
+				FC8402FE1FD27DFC00B540E0 /* BerKeyFrameVC */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		FC8402FE1FD27DFC00B540E0 /* BerKeyFrameVC */ = {
+			isa = PBXGroup;
+			children = (
+				FC8402F91FD27DF700B540E0 /* BerKeyFrameViewController.h */,
+				FC8402FA1FD27DF700B540E0 /* BerKeyFrameViewController.m */,
+				FC8402FB1FD27DF700B540E0 /* BerKeyFrameViewController.xib */,
+			);
+			path = BerKeyFrameVC;
 			sourceTree = "<group>";
 		};
 		FCB7081C1FBDCD9A0094A903 = {
@@ -381,6 +397,7 @@
 			files = (
 				FCB708721FBDDCD00094A903 /* Item2ViewController.xib in Resources */,
 				FCB7086D1FBDDCC30094A903 /* Item1ViewController.xib in Resources */,
+				FC8402FD1FD27DF700B540E0 /* BerKeyFrameViewController.xib in Resources */,
 				FCB708351FBDCD9A0094A903 /* LaunchScreen.storyboard in Resources */,
 				FCB708321FBDCD9A0094A903 /* Assets.xcassets in Resources */,
 				FC21DD161FBED20F0003903A /* DynamicViewController.xib in Resources */,
@@ -464,6 +481,7 @@
 				FCB7086C1FBDDCC30094A903 /* Item1ViewController.m in Sources */,
 				FCB7085F1FBDDB320094A903 /* BaseTabBarController.m in Sources */,
 				FCB708631FBDDC790094A903 /* BaseViewController.m in Sources */,
+				FC8402FC1FD27DF700B540E0 /* BerKeyFrameViewController.m in Sources */,
 				FCB708671FBDDCB30094A903 /* Item0ViewController.m in Sources */,
 				FCB7085C1FBDDB110094A903 /* BaseNavViewController.m in Sources */,
 				FC21DD151FBED20F0003903A /* DynamicViewController.m in Sources */,
