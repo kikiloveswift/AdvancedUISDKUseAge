@@ -94,6 +94,22 @@
     animationPosition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animationPosition.calculationMode = kCAAnimationPaced;
     [_ballLayer addAnimation:animationPosition forKey:@"animationPosition"];
+    
+    if (@available(iOS 9.0, *)) {
+        CASpringAnimation *springAnmation = [CASpringAnimation animationWithKeyPath:@"position.x"];
+        springAnmation.damping = 5;
+        //mass 是质量
+        springAnmation.mass = 4;
+        //stiffness 是刚度系数 刚度系数越大 产生的力越大 速度越快
+        springAnmation.stiffness = 50;
+        //初速度
+        springAnmation.initialVelocity = 10;
+        springAnmation.fromValue = @(sender.layer.position.x);
+        springAnmation.toValue = @(sender.layer.position.x +50);
+        //settlingDuration 是动画结算时间，只读属性 一般把动画duration设为该值
+        springAnmation.duration = springAnmation.settlingDuration;
+        [sender.layer addAnimation:springAnmation forKey:springAnmation.keyPath];
+    }
 
 }
 
