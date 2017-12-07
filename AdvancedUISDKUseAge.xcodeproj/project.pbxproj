@@ -10,7 +10,6 @@
 		6101C84A7830EE8F63F23597 /* libPods-AdvancedUISDKUseAge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 209A9D1B772ADD67EF1F35C8 /* libPods-AdvancedUISDKUseAge.a */; };
 		FC21DD151FBED20F0003903A /* DynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC21DD131FBED20F0003903A /* DynamicViewController.m */; };
 		FC21DD161FBED20F0003903A /* DynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC21DD141FBED20F0003903A /* DynamicViewController.xib */; };
-		FC8402FC1FD27DF700B540E0 /* BerKeyFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8402FA1FD27DF700B540E0 /* BerKeyFrameViewController.m */; };
 		FC8402FD1FD27DF700B540E0 /* BerKeyFrameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC8402FB1FD27DF700B540E0 /* BerKeyFrameViewController.xib */; };
 		FCB7082A1FBDCD9A0094A903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB708291FBDCD9A0094A903 /* AppDelegate.m */; };
 		FCB708301FBDCD9A0094A903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB7082E1FBDCD9A0094A903 /* Main.storyboard */; };
@@ -28,6 +27,8 @@
 		FCB7086D1FBDDCC30094A903 /* Item1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB7086B1FBDDCC30094A903 /* Item1ViewController.xib */; };
 		FCB708711FBDDCD00094A903 /* Item2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB7086F1FBDDCD00094A903 /* Item2ViewController.m */; };
 		FCB708721FBDDCD00094A903 /* Item2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB708701FBDDCD00094A903 /* Item2ViewController.xib */; };
+		FCF58DEF1FD90EE900F5D498 /* BerKeyFrameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FCF58DEE1FD90EE900F5D498 /* BerKeyFrameViewController.mm */; };
+		FCF58DF21FD90FEF00F5D498 /* AnimationManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = FCF58DF11FD90FEF00F5D498 /* AnimationManager.mm */; };
 		FCFD32561FC7E87900B6476E /* KeyFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFD32541FC7E87900B6476E /* KeyFrameViewController.m */; };
 		FCFD32571FC7E87900B6476E /* KeyFrameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFD32551FC7E87900B6476E /* KeyFrameViewController.xib */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		209A9D1B772ADD67EF1F35C8 /* libPods-AdvancedUISDKUseAge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdvancedUISDKUseAge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5503852F33A437A3742AA6EE /* Pods-AdvancedUISDKUseAge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedUISDKUseAge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedUISDKUseAge/Pods-AdvancedUISDKUseAge.debug.xcconfig"; sourceTree = "<group>"; };
 		C7A343C29B9F946AFB65BE85 /* Pods-AdvancedUISDKUseAge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedUISDKUseAge.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedUISDKUseAge/Pods-AdvancedUISDKUseAge.release.xcconfig"; sourceTree = "<group>"; };
+		FC0A1DA51FD907D300D5F020 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		FC21DD0C1FBECD6A0003903A /* AFNetReqCls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNetReqCls.h; sourceTree = "<group>"; };
 		FC21DD0D1FBECD6A0003903A /* AFNetReqCls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNetReqCls.m; sourceTree = "<group>"; };
 		FC21DD0E1FBECD880003903A /* NSString+MD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
@@ -63,7 +65,6 @@
 		FC21DD131FBED20F0003903A /* DynamicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicViewController.m; sourceTree = "<group>"; };
 		FC21DD141FBED20F0003903A /* DynamicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DynamicViewController.xib; sourceTree = "<group>"; };
 		FC8402F91FD27DF700B540E0 /* BerKeyFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BerKeyFrameViewController.h; sourceTree = "<group>"; };
-		FC8402FA1FD27DF700B540E0 /* BerKeyFrameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BerKeyFrameViewController.m; sourceTree = "<group>"; };
 		FC8402FB1FD27DF700B540E0 /* BerKeyFrameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BerKeyFrameViewController.xib; sourceTree = "<group>"; };
 		FCB708251FBDCD9A0094A903 /* AdvancedUISDKUseAge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedUISDKUseAge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB708281FBDCD9A0094A903 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +97,10 @@
 		FCB708701FBDDCD00094A903 /* Item2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Item2ViewController.xib; sourceTree = "<group>"; };
 		FCB708731FBDDCDE0094A903 /* Item3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Item3ViewController.h; sourceTree = "<group>"; };
 		FCB708791FBDDF7B0094A903 /* config.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.pch; sourceTree = "<group>"; };
+		FCF58DEE1FD90EE900F5D498 /* BerKeyFrameViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BerKeyFrameViewController.mm; sourceTree = "<group>"; };
+		FCF58DF01FD90FEF00F5D498 /* AnimationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationManager.h; sourceTree = "<group>"; };
+		FCF58DF11FD90FEF00F5D498 /* AnimationManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AnimationManager.mm; sourceTree = "<group>"; };
+		FCF58DF41FD91D0500F5D498 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		FCFD32531FC7E87900B6476E /* KeyFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyFrameViewController.h; sourceTree = "<group>"; };
 		FCFD32541FC7E87900B6476E /* KeyFrameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyFrameViewController.m; sourceTree = "<group>"; };
 		FCFD32551FC7E87900B6476E /* KeyFrameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyFrameViewController.xib; sourceTree = "<group>"; };
@@ -139,6 +144,8 @@
 		792FA4F2D0637D0B4D1E8408 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCF58DF41FD91D0500F5D498 /* libc++.tbd */,
+				FC0A1DA51FD907D300D5F020 /* libstdc++.6.0.9.tbd */,
 				209A9D1B772ADD67EF1F35C8 /* libPods-AdvancedUISDKUseAge.a */,
 			);
 			name = Frameworks;
@@ -158,10 +165,19 @@
 			isa = PBXGroup;
 			children = (
 				FC8402F91FD27DF700B540E0 /* BerKeyFrameViewController.h */,
-				FC8402FA1FD27DF700B540E0 /* BerKeyFrameViewController.m */,
+				FCF58DEE1FD90EE900F5D498 /* BerKeyFrameViewController.mm */,
 				FC8402FB1FD27DF700B540E0 /* BerKeyFrameViewController.xib */,
 			);
 			path = BerKeyFrameVC;
+			sourceTree = "<group>";
+		};
+		FC97172F1FD904A0007F4027 /* MM */ = {
+			isa = PBXGroup;
+			children = (
+				FCF58DF01FD90FEF00F5D498 /* AnimationManager.h */,
+				FCF58DF11FD90FEF00F5D498 /* AnimationManager.mm */,
+			);
+			path = MM;
 			sourceTree = "<group>";
 		};
 		FCB7081C1FBDCD9A0094A903 = {
@@ -191,6 +207,7 @@
 			children = (
 				FCB708281FBDCD9A0094A903 /* AppDelegate.h */,
 				FCB708291FBDCD9A0094A903 /* AppDelegate.m */,
+				FC97172F1FD904A0007F4027 /* MM */,
 				FC21DD171FBED2160003903A /* VC */,
 				FCB7087A1FBDDF810094A903 /* CommonShared */,
 				FCB708781FBDDCE80094A903 /* ItemVC */,
@@ -478,10 +495,11 @@
 			files = (
 				FCFD32561FC7E87900B6476E /* KeyFrameViewController.m in Sources */,
 				FCB708711FBDDCD00094A903 /* Item2ViewController.m in Sources */,
+				FCF58DEF1FD90EE900F5D498 /* BerKeyFrameViewController.mm in Sources */,
 				FCB7086C1FBDDCC30094A903 /* Item1ViewController.m in Sources */,
+				FCF58DF21FD90FEF00F5D498 /* AnimationManager.mm in Sources */,
 				FCB7085F1FBDDB320094A903 /* BaseTabBarController.m in Sources */,
 				FCB708631FBDDC790094A903 /* BaseViewController.m in Sources */,
-				FC8402FC1FD27DF700B540E0 /* BerKeyFrameViewController.m in Sources */,
 				FCB708671FBDDCB30094A903 /* Item0ViewController.m in Sources */,
 				FCB7085C1FBDDB110094A903 /* BaseNavViewController.m in Sources */,
 				FC21DD151FBED20F0003903A /* DynamicViewController.m in Sources */,
@@ -649,13 +667,42 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5503852F33A437A3742AA6EE /* Pods-AdvancedUISDKUseAge.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ML9NWM8SSX;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AdvancedUISDKUseAge/CommonShared/config.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+				);
 				INFOPLIST_FILE = AdvancedUISDKUseAge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FMDB\"",
+					"-l\"SDWebImage\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kong.AdvancedUISDKUseAge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -666,13 +713,42 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7A343C29B9F946AFB65BE85 /* Pods-AdvancedUISDKUseAge.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ML9NWM8SSX;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AdvancedUISDKUseAge/CommonShared/config.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+				);
 				INFOPLIST_FILE = AdvancedUISDKUseAge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FMDB\"",
+					"-l\"SDWebImage\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kong.AdvancedUISDKUseAge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

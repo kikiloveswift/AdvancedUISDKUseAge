@@ -7,6 +7,9 @@
 //
 
 #import "BerKeyFrameViewController.h"
+#include <iostream>
+
+#import "AnimationManager.h"
 
 @interface BerKeyFrameViewController ()
 
@@ -41,6 +44,13 @@
     basicAnimation.fillMode = kCAFillModeBoth;
     [_shape_IMGLayer addAnimation:basicAnimation forKey:@"animation"];
     
+}
+
+- (void)testCPPTemplate
+{
+//    int a = AnimationManager::coutMax(10, 11);
+    AnimationManager::abc = 10;
+    std::cout << AnimationManager::abc<< std::endl;
     
 }
 
@@ -51,7 +61,7 @@
 
 - (IBAction)stopAnimation:(UIButton *)sender
 {
-    
+    [self testCPPTemplate];
 }
 
 
