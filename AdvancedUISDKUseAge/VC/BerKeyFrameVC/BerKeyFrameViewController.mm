@@ -48,8 +48,10 @@
 
 - (void)testCPPTemplate
 {
-//    int a = AnimationManager::coutMax(10, 11);
-    AnimationManager::abc = 10;
+    AnimationManager::abc = 30;
+    int a = 10;
+    int b = 13;
+    AnimationManager::DisplayResult(a, b);
     std::cout << AnimationManager::abc<< std::endl;
     
 }

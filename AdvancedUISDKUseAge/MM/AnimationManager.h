@@ -7,18 +7,24 @@
 //
 //#ifndef __AdvancedUISDKUseAge__AnimationManager__
 //#define __AdvancedUISDKUseAge__AnimationManager__
-//#import <iostream>
+#import <iostream>
 
 namespace AnimationManager
 {
-//    template<typename T>
-//    T coutMax(T& a, T& b)
-//    {
-//        if (a < b)
-//        {
-//            return b;
-//        }
-//        return a;
-//    }
+    template <typename T>
+    T& GetMax(T& a, T& b)
+    {
+        if (a < b)
+        {
+            return b;
+        }
+        return a;
+    }
     int abc;
+    
+    template<typename T>
+    void DisplayResult(T& t1, T& t2)
+    {
+        std::cout<< GetMax(t1, t2)<< std::endl;
+    }
 }
