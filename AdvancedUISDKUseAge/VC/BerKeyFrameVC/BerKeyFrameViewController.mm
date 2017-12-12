@@ -54,6 +54,7 @@
     int b = 13;
     AnimationManager::DisplayResult(a, b);
     std::cout << AnimationManager::abc<< std::endl;
+    AnimationManager::getValue();
     
 }
 
