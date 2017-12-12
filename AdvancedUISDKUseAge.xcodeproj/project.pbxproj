@@ -10,6 +10,7 @@
 		6101C84A7830EE8F63F23597 /* libPods-AdvancedUISDKUseAge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 209A9D1B772ADD67EF1F35C8 /* libPods-AdvancedUISDKUseAge.a */; };
 		FC21DD151FBED20F0003903A /* DynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC21DD131FBED20F0003903A /* DynamicViewController.m */; };
 		FC21DD161FBED20F0003903A /* DynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC21DD141FBED20F0003903A /* DynamicViewController.xib */; };
+		FC399B951FDE1B81007E0CE5 /* AnimationDataManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = FC399B931FDE1B81007E0CE5 /* AnimationDataManager.mm */; };
 		FC8402FD1FD27DF700B540E0 /* BerKeyFrameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC8402FB1FD27DF700B540E0 /* BerKeyFrameViewController.xib */; };
 		FCB7082A1FBDCD9A0094A903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB708291FBDCD9A0094A903 /* AppDelegate.m */; };
 		FCB708301FBDCD9A0094A903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB7082E1FBDCD9A0094A903 /* Main.storyboard */; };
@@ -64,6 +65,8 @@
 		FC21DD121FBED20F0003903A /* DynamicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicViewController.h; sourceTree = "<group>"; };
 		FC21DD131FBED20F0003903A /* DynamicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicViewController.m; sourceTree = "<group>"; };
 		FC21DD141FBED20F0003903A /* DynamicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DynamicViewController.xib; sourceTree = "<group>"; };
+		FC399B931FDE1B81007E0CE5 /* AnimationDataManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AnimationDataManager.mm; sourceTree = "<group>"; };
+		FC399B941FDE1B81007E0CE5 /* AnimationDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationDataManager.h; sourceTree = "<group>"; };
 		FC8402F91FD27DF700B540E0 /* BerKeyFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BerKeyFrameViewController.h; sourceTree = "<group>"; };
 		FC8402FB1FD27DF700B540E0 /* BerKeyFrameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BerKeyFrameViewController.xib; sourceTree = "<group>"; };
 		FCB708251FBDCD9A0094A903 /* AdvancedUISDKUseAge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedUISDKUseAge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +179,8 @@
 			children = (
 				FCF58DF01FD90FEF00F5D498 /* AnimationManager.h */,
 				FCF58DF11FD90FEF00F5D498 /* AnimationManager.mm */,
+				FC399B931FDE1B81007E0CE5 /* AnimationDataManager.mm */,
+				FC399B941FDE1B81007E0CE5 /* AnimationDataManager.h */,
 			);
 			path = MM;
 			sourceTree = "<group>";
@@ -502,6 +507,7 @@
 				FCB708631FBDDC790094A903 /* BaseViewController.m in Sources */,
 				FCB708671FBDDCB30094A903 /* Item0ViewController.m in Sources */,
 				FCB7085C1FBDDB110094A903 /* BaseNavViewController.m in Sources */,
+				FC399B951FDE1B81007E0CE5 /* AnimationDataManager.mm in Sources */,
 				FC21DD151FBED20F0003903A /* DynamicViewController.m in Sources */,
 				FCB708381FBDCD9A0094A903 /* main.m in Sources */,
 				FCB7082A1FBDCD9A0094A903 /* AppDelegate.m in Sources */,

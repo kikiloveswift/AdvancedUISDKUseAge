@@ -10,6 +10,7 @@
 #include <iostream>
 
 #import "AnimationManager.h"
+#import "AnimationDataManager.h"
 
 @interface BerKeyFrameViewController ()
 
@@ -59,7 +60,7 @@
 
 - (IBAction)failureAnimation:(id)sender
 {
-    
+
 }
 
 - (IBAction)stopAnimation:(UIButton *)sender
