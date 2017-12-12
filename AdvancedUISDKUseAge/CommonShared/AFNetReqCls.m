@@ -13,7 +13,7 @@
 
 
 
-+ (void)requestURL:(NSString *)urlStr Method:(Method)m Params:(NSDictionary *)params HeaderParams:(NSDictionary *)headerParams Successs:(SuccessBlock)successblk Failure:(FailureBlock)failureBlk
++ (void)requestURL:(NSString *)urlStr Method:(RequstMethod)m Params:(NSDictionary *)params HeaderParams:(NSDictionary *)headerParams Successs:(SuccessBlock)successblk Failure:(FailureBlock)failureBlk
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];

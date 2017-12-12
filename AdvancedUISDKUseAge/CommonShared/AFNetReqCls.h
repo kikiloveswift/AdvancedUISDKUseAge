@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, Method)
+typedef NS_ENUM(NSUInteger, RequstMethod)
 {
     MethodGET = 1,
     MethodPOST = 2
@@ -22,7 +22,7 @@ typedef void(^FailureBlock)(id obj);
 @interface AFNetReqCls : NSObject
 
 + (void)requestURL:(NSString *)urlStr
-            Method:(Method)m
+            Method:(RequstMethod)m
             Params:(NSDictionary *)params
       HeaderParams:(NSDictionary *)headerParams
           Successs:(SuccessBlock)successblk
