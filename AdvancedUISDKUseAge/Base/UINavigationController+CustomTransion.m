@@ -8,6 +8,7 @@
 
 #import "UINavigationController+CustomTransion.h"
 #import <objc/runtime.h>
+#import "NSObject+PrintAllProperty.h"
 
 @implementation UINavigationController (CustomTransion)
 
@@ -40,6 +41,18 @@
     NSLog(@"push here");
     //此时调用 c_pushViewController 实际上调用的是系统的 pushViewController的实现。
     [self c_pushViewController:viewController animated:animated];
+    //遍历这个类的所有属性
+    [self.interactivePopGestureRecognizer printsIvars];
+    NSArray *internalTargets = [self.interactivePopGestureRecognizer valueForKey:@"targets"];
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController
+{
+    return nil;
+}
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
+{
+    return nil;
 }
 
 @end

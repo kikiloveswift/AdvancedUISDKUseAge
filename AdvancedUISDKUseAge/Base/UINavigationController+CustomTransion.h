@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UINavigationController (CustomTransion)
+@interface UINavigationController (CustomTransion)<UINavigationControllerDelegate>
 
 
 @end
