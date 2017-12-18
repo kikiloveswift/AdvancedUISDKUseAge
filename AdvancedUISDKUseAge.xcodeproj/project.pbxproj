@@ -28,6 +28,9 @@
 		FCB7086D1FBDDCC30094A903 /* Item1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB7086B1FBDDCC30094A903 /* Item1ViewController.xib */; };
 		FCB708711FBDDCD00094A903 /* Item2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB7086F1FBDDCD00094A903 /* Item2ViewController.m */; };
 		FCB708721FBDDCD00094A903 /* Item2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB708701FBDDCD00094A903 /* Item2ViewController.xib */; };
+		FCE7931A1FE7A5890075ABA9 /* NSObject+PrintAllProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE793191FE7A5890075ABA9 /* NSObject+PrintAllProperty.m */; };
+		FCF1994F1FDFA54C00B9CDF2 /* UINavigationController+CustomTransion.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF1994E1FDFA54C00B9CDF2 /* UINavigationController+CustomTransion.m */; };
+		FCF199521FDFA6FE00B9CDF2 /* WeakNSProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF199511FDFA6FE00B9CDF2 /* WeakNSProxy.m */; };
 		FCF58DEF1FD90EE900F5D498 /* BerKeyFrameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FCF58DEE1FD90EE900F5D498 /* BerKeyFrameViewController.mm */; };
 		FCF58DF21FD90FEF00F5D498 /* AnimationManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = FCF58DF11FD90FEF00F5D498 /* AnimationManager.mm */; };
 		FCFD32561FC7E87900B6476E /* KeyFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFD32541FC7E87900B6476E /* KeyFrameViewController.m */; };
@@ -100,6 +103,12 @@
 		FCB708701FBDDCD00094A903 /* Item2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Item2ViewController.xib; sourceTree = "<group>"; };
 		FCB708731FBDDCDE0094A903 /* Item3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Item3ViewController.h; sourceTree = "<group>"; };
 		FCB708791FBDDF7B0094A903 /* config.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.pch; sourceTree = "<group>"; };
+		FCE793181FE7A5890075ABA9 /* NSObject+PrintAllProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+PrintAllProperty.h"; sourceTree = "<group>"; };
+		FCE793191FE7A5890075ABA9 /* NSObject+PrintAllProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PrintAllProperty.m"; sourceTree = "<group>"; };
+		FCF1994D1FDFA54C00B9CDF2 /* UINavigationController+CustomTransion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+CustomTransion.h"; sourceTree = "<group>"; };
+		FCF1994E1FDFA54C00B9CDF2 /* UINavigationController+CustomTransion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+CustomTransion.m"; sourceTree = "<group>"; };
+		FCF199501FDFA6FE00B9CDF2 /* WeakNSProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakNSProxy.h; sourceTree = "<group>"; };
+		FCF199511FDFA6FE00B9CDF2 /* WeakNSProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakNSProxy.m; sourceTree = "<group>"; };
 		FCF58DEE1FD90EE900F5D498 /* BerKeyFrameViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BerKeyFrameViewController.mm; sourceTree = "<group>"; };
 		FCF58DF01FD90FEF00F5D498 /* AnimationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationManager.h; sourceTree = "<group>"; };
 		FCF58DF11FD90FEF00F5D498 /* AnimationManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AnimationManager.mm; sourceTree = "<group>"; };
@@ -253,6 +262,12 @@
 				FCB7085E1FBDDB320094A903 /* BaseTabBarController.m */,
 				FCB708611FBDDC790094A903 /* BaseViewController.h */,
 				FCB708621FBDDC790094A903 /* BaseViewController.m */,
+				FCF1994D1FDFA54C00B9CDF2 /* UINavigationController+CustomTransion.h */,
+				FCF1994E1FDFA54C00B9CDF2 /* UINavigationController+CustomTransion.m */,
+				FCE793181FE7A5890075ABA9 /* NSObject+PrintAllProperty.h */,
+				FCE793191FE7A5890075ABA9 /* NSObject+PrintAllProperty.m */,
+				FCF199501FDFA6FE00B9CDF2 /* WeakNSProxy.h */,
+				FCF199511FDFA6FE00B9CDF2 /* WeakNSProxy.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -502,8 +517,11 @@
 				FCB708711FBDDCD00094A903 /* Item2ViewController.m in Sources */,
 				FCF58DEF1FD90EE900F5D498 /* BerKeyFrameViewController.mm in Sources */,
 				FCB7086C1FBDDCC30094A903 /* Item1ViewController.m in Sources */,
+				FCE7931A1FE7A5890075ABA9 /* NSObject+PrintAllProperty.m in Sources */,
 				FCF58DF21FD90FEF00F5D498 /* AnimationManager.mm in Sources */,
 				FCB7085F1FBDDB320094A903 /* BaseTabBarController.m in Sources */,
+				FCF1994F1FDFA54C00B9CDF2 /* UINavigationController+CustomTransion.m in Sources */,
+				FCF199521FDFA6FE00B9CDF2 /* WeakNSProxy.m in Sources */,
 				FCB708631FBDDC790094A903 /* BaseViewController.m in Sources */,
 				FCB708671FBDDCB30094A903 /* Item0ViewController.m in Sources */,
 				FCB7085C1FBDDB110094A903 /* BaseNavViewController.m in Sources */,
@@ -673,7 +691,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5503852F33A437A3742AA6EE /* Pods-AdvancedUISDKUseAge.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -719,7 +737,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7A343C29B9F946AFB65BE85 /* Pods-AdvancedUISDKUseAge.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
