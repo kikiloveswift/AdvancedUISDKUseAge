@@ -10,5 +10,7 @@
 
 @interface UINavigationController (CustomTransion)<UINavigationControllerDelegate>
 
+@property (nonatomic, strong, readonly) UIPanGestureRecognizer *CT_POPGesture;
+
 
 @end

@@ -20,27 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdvancedUISDKUseAge/Base/NSObject+PrintAllProperty.m"
-            timestampString = "535282333.914528"
+            timestampString = "535282470.05988"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "-printsIvars"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AdvancedUISDKUseAge/Base/NSObject+PrintAllProperty.m"
-            timestampString = "535282336.080712"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "-printsIvars"
             landmarkType = "7">
          </BreakpointContent>

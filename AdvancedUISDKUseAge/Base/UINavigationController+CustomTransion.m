@@ -43,7 +43,10 @@
     [self c_pushViewController:viewController animated:animated];
     //遍历这个类的所有属性
     [self.interactivePopGestureRecognizer printsIvars];
+    //获取 类型:@"NSMutableArray",名称:_targets
     NSArray *internalTargets = [self.interactivePopGestureRecognizer valueForKey:@"targets"];
+    id internalTarget = [internalTarget firstObject];
+    
 }
 
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController
