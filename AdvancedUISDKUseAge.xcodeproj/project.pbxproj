@@ -11,6 +11,7 @@
 		FC21DD151FBED20F0003903A /* DynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC21DD131FBED20F0003903A /* DynamicViewController.m */; };
 		FC21DD161FBED20F0003903A /* DynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC21DD141FBED20F0003903A /* DynamicViewController.xib */; };
 		FC399B951FDE1B81007E0CE5 /* AnimationDataManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = FC399B931FDE1B81007E0CE5 /* AnimationDataManager.mm */; };
+		FC5B09511FE8B771001A4EFD /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5B09501FE8B771001A4EFD /* TestModel.m */; };
 		FC8402FD1FD27DF700B540E0 /* BerKeyFrameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC8402FB1FD27DF700B540E0 /* BerKeyFrameViewController.xib */; };
 		FCB7082A1FBDCD9A0094A903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB708291FBDCD9A0094A903 /* AppDelegate.m */; };
 		FCB708301FBDCD9A0094A903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB7082E1FBDCD9A0094A903 /* Main.storyboard */; };
@@ -70,6 +71,8 @@
 		FC21DD141FBED20F0003903A /* DynamicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DynamicViewController.xib; sourceTree = "<group>"; };
 		FC399B931FDE1B81007E0CE5 /* AnimationDataManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AnimationDataManager.mm; sourceTree = "<group>"; };
 		FC399B941FDE1B81007E0CE5 /* AnimationDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationDataManager.h; sourceTree = "<group>"; };
+		FC5B094F1FE8B771001A4EFD /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		FC5B09501FE8B771001A4EFD /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
 		FC8402F91FD27DF700B540E0 /* BerKeyFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BerKeyFrameViewController.h; sourceTree = "<group>"; };
 		FC8402FB1FD27DF700B540E0 /* BerKeyFrameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BerKeyFrameViewController.xib; sourceTree = "<group>"; };
 		FCB708251FBDCD9A0094A903 /* AdvancedUISDKUseAge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedUISDKUseAge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,6 +269,8 @@
 				FCF1994E1FDFA54C00B9CDF2 /* UINavigationController+CustomTransion.m */,
 				FCE793181FE7A5890075ABA9 /* NSObject+PrintAllProperty.h */,
 				FCE793191FE7A5890075ABA9 /* NSObject+PrintAllProperty.m */,
+				FC5B094F1FE8B771001A4EFD /* TestModel.h */,
+				FC5B09501FE8B771001A4EFD /* TestModel.m */,
 				FCF199501FDFA6FE00B9CDF2 /* WeakNSProxy.h */,
 				FCF199511FDFA6FE00B9CDF2 /* WeakNSProxy.m */,
 			);
@@ -526,6 +531,7 @@
 				FCB708671FBDDCB30094A903 /* Item0ViewController.m in Sources */,
 				FCB7085C1FBDDB110094A903 /* BaseNavViewController.m in Sources */,
 				FC399B951FDE1B81007E0CE5 /* AnimationDataManager.mm in Sources */,
+				FC5B09511FE8B771001A4EFD /* TestModel.m in Sources */,
 				FC21DD151FBED20F0003903A /* DynamicViewController.m in Sources */,
 				FCB708381FBDCD9A0094A903 /* main.m in Sources */,
 				FCB7082A1FBDCD9A0094A903 /* AppDelegate.m in Sources */,

@@ -10,7 +10,25 @@
 #import <objc/runtime.h>
 #import "NSObject+PrintAllProperty.h"
 
+
 @implementation UINavigationController (CustomTransion)
+
+
+
+- (UIPanGestureRecognizer *)CT_POPGesture
+{
+    NSLog(@"sel is %@",NSStringFromSelector(_cmd));
+
+    UIPanGestureRecognizer *panges = objc_getAssociatedObject(self, _cmd);
+    
+    if (!panges)
+    {
+        panges = [UIPanGestureRecognizer new];
+        objc_setAssociatedObject(self, _cmd, panges, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+
+    }
+    return panges;
+}
 
 + (void)load
 {
@@ -39,14 +57,30 @@
 - (void)c_pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     NSLog(@"push here");
+    
     //此时调用 c_pushViewController 实际上调用的是系统的 pushViewController的实现。
     [self c_pushViewController:viewController animated:animated];
     //遍历这个类的所有属性
-    [self.interactivePopGestureRecognizer printsIvars];
+//    [self.interactivePopGestureRecognizer printsIvars];
+//    [self.interactivePopGestureRecognizer printsProperties];
     //获取 类型:@"NSMutableArray",名称:_targets
-    NSArray *internalTargets = [self.interactivePopGestureRecognizer valueForKey:@"targets"];
-    id internalTarget = [internalTarget firstObject];
-    
+    // handleNavigationTransition:
+    if (![self.interactivePopGestureRecognizer.view.gestureRecognizers containsObject:self.CT_POPGesture])
+    {
+        NSArray *internalTargets = (NSArray *)[self.interactivePopGestureRecognizer valueForKey:@"targets"];
+        id internalTarget = [internalTargets firstObject];
+        SEL orignSEL = NSSelectorFromString(@"handleNavigationTransition:");
+        Class innerCLS = NSClassFromString(@"UIScreenEdgePanGestureRecognizer");
+        Method originM = class_getInstanceMethod([innerCLS class], orignSEL);
+        BOOL addSuccess = class_addMethod([self.CT_POPGesture class], orignSEL, class_getMethodImplementation([self.interactivePopGestureRecognizer class], orignSEL), method_getTypeEncoding(originM));
+        if (addSuccess)
+        {
+            NSLog(@"添加成功");
+        }
+        [self.CT_POPGesture addTarget:internalTarget action:orignSEL];
+        [self.interactivePopGestureRecognizer.view addGestureRecognizer:self.CT_POPGesture];
+        self.interactivePopGestureRecognizer.enabled = NO;
+    }
 }
 
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController

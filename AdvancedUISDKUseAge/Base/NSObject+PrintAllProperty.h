@@ -12,4 +12,6 @@
 
 - (void)printsIvars;
 
+- (void)printsProperties;
+
 @end
