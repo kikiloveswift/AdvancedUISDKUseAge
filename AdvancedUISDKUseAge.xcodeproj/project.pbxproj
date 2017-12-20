@@ -30,6 +30,8 @@
 		FCB708711FBDDCD00094A903 /* Item2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB7086F1FBDDCD00094A903 /* Item2ViewController.m */; };
 		FCB708721FBDDCD00094A903 /* Item2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB708701FBDDCD00094A903 /* Item2ViewController.xib */; };
 		FCE7931A1FE7A5890075ABA9 /* NSObject+PrintAllProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE793191FE7A5890075ABA9 /* NSObject+PrintAllProperty.m */; };
+		FCF1633A1FEA33C100789D15 /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF163381FEA33C100789D15 /* ExchangeViewController.m */; };
+		FCF1633B1FEA33C100789D15 /* ExchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF163391FEA33C100789D15 /* ExchangeViewController.xib */; };
 		FCF1994F1FDFA54C00B9CDF2 /* UINavigationController+CustomTransion.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF1994E1FDFA54C00B9CDF2 /* UINavigationController+CustomTransion.m */; };
 		FCF199521FDFA6FE00B9CDF2 /* WeakNSProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF199511FDFA6FE00B9CDF2 /* WeakNSProxy.m */; };
 		FCF58DEF1FD90EE900F5D498 /* BerKeyFrameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FCF58DEE1FD90EE900F5D498 /* BerKeyFrameViewController.mm */; };
@@ -108,6 +110,9 @@
 		FCB708791FBDDF7B0094A903 /* config.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.pch; sourceTree = "<group>"; };
 		FCE793181FE7A5890075ABA9 /* NSObject+PrintAllProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+PrintAllProperty.h"; sourceTree = "<group>"; };
 		FCE793191FE7A5890075ABA9 /* NSObject+PrintAllProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PrintAllProperty.m"; sourceTree = "<group>"; };
+		FCF163371FEA33C100789D15 /* ExchangeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExchangeViewController.h; sourceTree = "<group>"; };
+		FCF163381FEA33C100789D15 /* ExchangeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExchangeViewController.m; sourceTree = "<group>"; };
+		FCF163391FEA33C100789D15 /* ExchangeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExchangeViewController.xib; sourceTree = "<group>"; };
 		FCF1994D1FDFA54C00B9CDF2 /* UINavigationController+CustomTransion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+CustomTransion.h"; sourceTree = "<group>"; };
 		FCF1994E1FDFA54C00B9CDF2 /* UINavigationController+CustomTransion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+CustomTransion.m"; sourceTree = "<group>"; };
 		FCF199501FDFA6FE00B9CDF2 /* WeakNSProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakNSProxy.h; sourceTree = "<group>"; };
@@ -172,6 +177,7 @@
 				FCFD32521FC7E84F00B6476E /* DynamicVC */,
 				FCFD32581FC7E87F00B6476E /* KeyFrameVC */,
 				FC8402FE1FD27DFC00B540E0 /* BerKeyFrameVC */,
+				FCF1633C1FEA33C900789D15 /* ExchangeVC */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -308,6 +314,16 @@
 			path = CommonShared;
 			sourceTree = "<group>";
 		};
+		FCF1633C1FEA33C900789D15 /* ExchangeVC */ = {
+			isa = PBXGroup;
+			children = (
+				FCF163371FEA33C100789D15 /* ExchangeViewController.h */,
+				FCF163381FEA33C100789D15 /* ExchangeViewController.m */,
+				FCF163391FEA33C100789D15 /* ExchangeViewController.xib */,
+			);
+			path = ExchangeVC;
+			sourceTree = "<group>";
+		};
 		FCFD32521FC7E84F00B6476E /* DynamicVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,6 +456,7 @@
 				FCB708721FBDDCD00094A903 /* Item2ViewController.xib in Resources */,
 				FCB7086D1FBDDCC30094A903 /* Item1ViewController.xib in Resources */,
 				FC8402FD1FD27DF700B540E0 /* BerKeyFrameViewController.xib in Resources */,
+				FCF1633B1FEA33C100789D15 /* ExchangeViewController.xib in Resources */,
 				FCB708351FBDCD9A0094A903 /* LaunchScreen.storyboard in Resources */,
 				FCB708321FBDCD9A0094A903 /* Assets.xcassets in Resources */,
 				FC21DD161FBED20F0003903A /* DynamicViewController.xib in Resources */,
@@ -525,6 +542,7 @@
 				FCE7931A1FE7A5890075ABA9 /* NSObject+PrintAllProperty.m in Sources */,
 				FCF58DF21FD90FEF00F5D498 /* AnimationManager.mm in Sources */,
 				FCB7085F1FBDDB320094A903 /* BaseTabBarController.m in Sources */,
+				FCF1633A1FEA33C100789D15 /* ExchangeViewController.m in Sources */,
 				FCF1994F1FDFA54C00B9CDF2 /* UINavigationController+CustomTransion.m in Sources */,
 				FCF199521FDFA6FE00B9CDF2 /* WeakNSProxy.m in Sources */,
 				FCB708631FBDDC790094A903 /* BaseViewController.m in Sources */,

@@ -29,7 +29,7 @@ static NSString *identifyItm0 = @"identifyItm0";
 
 - (void)initData
 {
-    _dataArr = @[@"DynamicViewController",@"KeyFrameViewController",@"BerKeyFrameViewController"];
+    _dataArr = @[@"DynamicViewController",@"KeyFrameViewController",@"BerKeyFrameViewController",@"ExchangeViewController"];
 }
 - (void)initUI
 {
