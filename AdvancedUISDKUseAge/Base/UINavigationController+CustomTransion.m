@@ -32,7 +32,6 @@
 
 + (void)load
 {
-    [super load];
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class cls = [self class];

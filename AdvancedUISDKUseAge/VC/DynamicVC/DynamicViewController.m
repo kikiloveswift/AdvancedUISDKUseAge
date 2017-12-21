@@ -16,7 +16,7 @@ typedef void(^ComPletedBlock)(void);
     UIImageView *_imgViewRuiWen;
     UIImageView *_imgViewzlc;
 }
-
+  
 
 @end
 

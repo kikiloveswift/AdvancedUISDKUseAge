@@ -22,6 +22,8 @@
 
 @implementation ExchangeViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -59,7 +61,6 @@
     [self.view addGestureRecognizer:panges];
     [panges addTarget:value action:internalSEL];
 //    [self.poorBtn addTarget:target action:internalSEL forControlEvents:UIControlEventTouchUpInside];
-    
 }
 
 @end
