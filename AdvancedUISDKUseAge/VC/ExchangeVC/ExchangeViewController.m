@@ -43,7 +43,6 @@
 //    NSSet *allTargets = _weathyBtn.allTargets;
 //    id target = [allTargets.allObjects firstObject];
 //    [self.poorBtn addTarget:target action:wealthSEL forControlEvents:UIControlEventTouchUpInside];
-    
     SEL internalSEL = NSSelectorFromString(@"handleNavigationTransition:");
     NSArray *internalTargets = (NSArray *)[self.navigationController.interactivePopGestureRecognizer valueForKey:@"targets"];
     id target = [internalTargets firstObject];
