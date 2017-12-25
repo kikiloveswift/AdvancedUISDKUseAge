@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UINavigationController (CustomTransion)<UINavigationControllerDelegate>
+@interface UINavigationController (CustomTransion)
 
 @property (nonatomic, strong, readonly) UIPanGestureRecognizer *CT_POPGesture;
 

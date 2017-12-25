@@ -7,12 +7,16 @@
 //
 
 #import "Item0ViewController.h"
+#import "NavTransitionDelegate.h"
+
 
 @interface Item0ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *mTableView;
 
 @property (nonatomic, copy) NSArray *dataArr;
+
+@property (nonatomic, strong) NavTransitionDelegate *navDelegate;
 
 @end
 
@@ -25,11 +29,34 @@ static NSString *identifyItm0 = @"identifyItm0";
     // Do any additional setup after loading the view from its nib.
     [self initData];
     [self initUI];
+    [self initDelegate];
 }
+
+- (void)initDelegate
+{
+    _navDelegate = [[NavTransitionDelegate alloc]initWithNav:self.navigationController];
+//    self.navigationController.delegate = self;
+    self.navigationController.view.userInteractionEnabled = YES;
+//    self.navigationController.transitioningDelegate
+}
+
+//#pragma Mark -UINavigationControllerDelegate
+//- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
+//{
+////    if (operation == UINavigationControllerOperationPop) {
+////        return self.animator;
+////    }
+//    return nil;
+//}
+//
+//- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController
+//{
+//    return nil;
+//}
 
 - (void)initData
 {
-    _dataArr = @[@"DynamicViewController",@"KeyFrameViewController",@"BerKeyFrameViewController",@"ExchangeViewController"];
+    _dataArr = @[@"DynamicViewController",@"KeyFrameViewController",@"BerKeyFrameViewController",@"ExchangeViewController",@"TransitionViewController"];
 }
 - (void)initUI
 {
