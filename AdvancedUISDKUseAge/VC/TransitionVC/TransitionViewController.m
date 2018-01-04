@@ -26,14 +26,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.view.userInteractionEnabled = YES;
     [self initUI];
-    
-    for (UIViewController *vc in self.navigationController.viewControllers) {
-        if (!vc.view.userInteractionEnabled)
-        {
-            vc.view.backgroundColor = [UIColor greenColor];
-            NSLog(@"found");
-        }
-    }
 }
 
 
