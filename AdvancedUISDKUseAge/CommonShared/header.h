@@ -13,4 +13,6 @@
 
 #import "NSString+MD5.h"
 
+#import "UIColor+Hex.h"
+
 #endif /* header_h */
