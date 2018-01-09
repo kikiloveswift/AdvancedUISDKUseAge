@@ -199,10 +199,12 @@ typedef void (^FinishAnimationBlock)(BOOL isFinished);
     keyAnimation.beginTime = CACurrentMediaTime();
     keyAnimation.removedOnCompletion = true;
     [maskLayer addAnimation:keyAnimation forKey:@"MaskPathAnimation"];
+    __weak typeof(self) weakself = self;
     self.finishBlock = ^(BOOL isFinished) {
         if (isFinished)
         {
             CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+            basicAnimation.delegate = weakself;
             basicAnimation.fromValue = @1;
             basicAnimation.toValue = @0;
             basicAnimation.duration = 0.2f;
@@ -216,11 +218,21 @@ typedef void (^FinishAnimationBlock)(BOOL isFinished);
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-    if (flag)
+    if ([anim isKindOfClass:[CABasicAnimation class]])
     {
-        if (self.finishBlock)
+        Class cls = NSClassFromString(@"FragmentPresentViewController");
+        self.modalPresentationStyle = UIModalPresentationPopover;
+        self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [self presentViewController:[cls new] animated:YES completion:nil];
+    }
+    else
+    {
+        if (flag)
         {
-            self.finishBlock(YES);
+            if (self.finishBlock)
+            {
+                self.finishBlock(YES);
+            }
         }
     }
 }
