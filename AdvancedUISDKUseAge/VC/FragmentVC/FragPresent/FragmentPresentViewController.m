@@ -50,19 +50,19 @@
     s2layer.strokeColor = [UIColor colorWithHex:0x555555 alpha:1].CGColor;
     [control.layer addSublayer:s2layer];
     
-    
     CAShapeLayer *bgLayer = [CAShapeLayer layer];
-    bgLayer.frame = self.view.bounds;
+    bgLayer.frame = CGRectMake(0, 0, KWidth, KHeight);
     bgLayer.contents = (__bridge id _Nullable)[UIImage imageNamed:@"zlc.jpg"].CGImage;
-//    bgLayer.contentsGravity = kCAGravityResizeAspectFill;
+    bgLayer.contentsGravity = kCAGravityResizeAspectFill;
     [self.view.layer addSublayer:bgLayer];
     [self.view.layer insertSublayer:bgLayer below:control.layer];
 }
 
 - (void)breakAnimation:(UIControl *)contrl
 {
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 
 

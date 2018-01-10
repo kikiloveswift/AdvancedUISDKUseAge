@@ -39,6 +39,8 @@
 		FCB7086D1FBDDCC30094A903 /* Item1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB7086B1FBDDCC30094A903 /* Item1ViewController.xib */; };
 		FCB708711FBDDCD00094A903 /* Item2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB7086F1FBDDCD00094A903 /* Item2ViewController.m */; };
 		FCB708721FBDDCD00094A903 /* Item2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB708701FBDDCD00094A903 /* Item2ViewController.xib */; };
+		FCB862B52005FBAD00DF84F0 /* PresentAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB862B42005FBAD00DF84F0 /* PresentAnimator.m */; };
+		FCB862B920060C5600DF84F0 /* ViewTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB862B820060C5600DF84F0 /* ViewTexture.m */; };
 		FCE7931A1FE7A5890075ABA9 /* NSObject+PrintAllProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE793191FE7A5890075ABA9 /* NSObject+PrintAllProperty.m */; };
 		FCF1633A1FEA33C100789D15 /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF163381FEA33C100789D15 /* ExchangeViewController.m */; };
 		FCF1633B1FEA33C100789D15 /* ExchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF163391FEA33C100789D15 /* ExchangeViewController.xib */; };
@@ -135,6 +137,10 @@
 		FCB708701FBDDCD00094A903 /* Item2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Item2ViewController.xib; sourceTree = "<group>"; };
 		FCB708731FBDDCDE0094A903 /* Item3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Item3ViewController.h; sourceTree = "<group>"; };
 		FCB708791FBDDF7B0094A903 /* config.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.pch; sourceTree = "<group>"; };
+		FCB862B32005FBAD00DF84F0 /* PresentAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentAnimator.h; sourceTree = "<group>"; };
+		FCB862B42005FBAD00DF84F0 /* PresentAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentAnimator.m; sourceTree = "<group>"; };
+		FCB862B720060C5600DF84F0 /* ViewTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewTexture.h; sourceTree = "<group>"; };
+		FCB862B820060C5600DF84F0 /* ViewTexture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewTexture.m; sourceTree = "<group>"; };
 		FCE793181FE7A5890075ABA9 /* NSObject+PrintAllProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+PrintAllProperty.h"; sourceTree = "<group>"; };
 		FCE793191FE7A5890075ABA9 /* NSObject+PrintAllProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PrintAllProperty.m"; sourceTree = "<group>"; };
 		FCF163371FEA33C100789D15 /* ExchangeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExchangeViewController.h; sourceTree = "<group>"; };
@@ -236,6 +242,8 @@
 			children = (
 				FC66B4681FF0C76B0095E283 /* Animator */,
 				FC66B4651FF0C6EC0095E283 /* NavDelegate */,
+				FCB862B62005FBB100DF84F0 /* PresentAnimator */,
+				FCB862BA20060C5B00DF84F0 /* ViewTexture */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -412,6 +420,24 @@
 				FC21DD111FBECE430003903A /* defineDocument.h */,
 			);
 			path = CommonShared;
+			sourceTree = "<group>";
+		};
+		FCB862B62005FBB100DF84F0 /* PresentAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				FCB862B32005FBAD00DF84F0 /* PresentAnimator.h */,
+				FCB862B42005FBAD00DF84F0 /* PresentAnimator.m */,
+			);
+			path = PresentAnimator;
+			sourceTree = "<group>";
+		};
+		FCB862BA20060C5B00DF84F0 /* ViewTexture */ = {
+			isa = PBXGroup;
+			children = (
+				FCB862B720060C5600DF84F0 /* ViewTexture.h */,
+				FCB862B820060C5600DF84F0 /* ViewTexture.m */,
+			);
+			path = ViewTexture;
 			sourceTree = "<group>";
 		};
 		FCF1633C1FEA33C900789D15 /* ExchangeVC */ = {
@@ -650,6 +676,7 @@
 				FCF1633A1FEA33C100789D15 /* ExchangeViewController.m in Sources */,
 				FCF1994F1FDFA54C00B9CDF2 /* UINavigationController+CustomTransion.m in Sources */,
 				FCF199521FDFA6FE00B9CDF2 /* WeakNSProxy.m in Sources */,
+				FCB862B52005FBAD00DF84F0 /* PresentAnimator.m in Sources */,
 				FC66B45B1FF0C4B00095E283 /* TransitionViewController.m in Sources */,
 				FCA1627B1FFFC34D00B1C4A4 /* UIColor+Hex.m in Sources */,
 				FCB708631FBDDC790094A903 /* BaseViewController.m in Sources */,
@@ -663,6 +690,7 @@
 				FCB708381FBDCD9A0094A903 /* main.m in Sources */,
 				FCB7082A1FBDCD9A0094A903 /* AppDelegate.m in Sources */,
 				FCA162761FFFC14A00B1C4A4 /* FragmentViewController.m in Sources */,
+				FCB862B920060C5600DF84F0 /* ViewTexture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
