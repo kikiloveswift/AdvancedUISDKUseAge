@@ -56,7 +56,7 @@ static NSString *identifyItm0 = @"identifyItm0";
 
 - (void)initData
 {
-    _dataArr = @[@"DynamicViewController",@"KeyFrameViewController",@"BerKeyFrameViewController",@"ExchangeViewController",@"TransitionViewController",@"SnowAnimationViewController",@"FragmentViewController"];
+    _dataArr = @[@"DynamicViewController",@"KeyFrameViewController",@"BerKeyFrameViewController",@"ExchangeViewController",@"TransitionViewController",@"SnowAnimationViewController",@"FragmentViewController",@"RunLoopUseAgeViewController"];
 }
 - (void)initUI
 {

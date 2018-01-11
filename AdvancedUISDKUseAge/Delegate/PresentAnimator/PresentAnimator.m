@@ -9,12 +9,14 @@
 #import "PresentAnimator.h"
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
+#import "ViewTexture.h"
 
-@interface PresentAnimator()
+@interface PresentAnimator()<GLKViewDelegate>
 
 @property (nonatomic, strong) EAGLContext *glContext;
 
 @property (nonatomic, strong) GLKView *glView;
+
 
 @end
 
@@ -36,18 +38,30 @@
     
     self.glView = [[GLKView alloc] initWithFrame:fromView.frame context:self.glContext];
     _glView.enableSetNeedsDisplay = true;
-//    _glView.delegate = self;
-//    _glView.isOpaque = false;
+    _glView.delegate = self;
     [containerView addSubview:_glView];
     
+    ViewTexture *texture = [ViewTexture new];
+    [texture setUPOpenGL];
+    [texture renderView:fromView];
     
+    GLKBaseEffect *effect = [GLKBaseEffect new];
     
+    GLKMatrix4 projectionMatrix = GLKMatrix4MakeOrtho(0, (float)texture.width, 0, (float)texture.height, -1, 1);
+    effect.transform.projectionMatrix = projectionMatrix;
+    
+
 }
 
 - (float)generateRandomFloatWith:(float)smallNum BigNum:(float)bigNum
 {
     float diff = bigNum - smallNum;
     return fmod(arc4random() / 100.0, diff) + smallNum;
+}
+
+- (void)glkView:(nonnull GLKView *)view drawInRect:(CGRect)rect
+{
+    
 }
 
 @end

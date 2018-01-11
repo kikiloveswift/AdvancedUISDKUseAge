@@ -11,6 +11,15 @@
 
 @interface ViewTexture : NSObject
 
+@property (nonatomic, assign) GLuint name;
+
+@property (nonatomic, assign) GLsizei width;
+
+@property (nonatomic, assign) GLsizei height;
+
+- (void)setUPOpenGL;
+
+- (void)renderView:(UIView *)view;
 
 
 @end
