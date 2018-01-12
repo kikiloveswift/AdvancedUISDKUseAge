@@ -7,6 +7,8 @@
 //
 
 #import "RunLoopUseAgeViewController.h"
+#include <mach/mach_time.h>
+#import <pthread.h>
 
 void foo2(void *arg3)
 {
@@ -40,9 +42,11 @@ typedef struct
     int *c = &b;
     c1.foo1 = &foo2;
     c1.foo1(c);
-    c1.foo(c);
+    uint64_t timeNow = mach_absolute_time();
+//    pthread_mutex_lock()
     
 }
+
 
 
 
