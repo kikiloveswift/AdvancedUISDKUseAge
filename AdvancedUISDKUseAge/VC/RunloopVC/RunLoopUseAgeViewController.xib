@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,9 +16,28 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHU-4z-YP6">
+                    <rect key="frame" x="20" y="341" width="156" height="54"/>
+                    <color key="backgroundColor" red="1" green="0.78258213799999998" blue="0.38403388589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="umQ-GB-wbm"/>
+                        <constraint firstAttribute="width" constant="156" id="wuP-1K-HC8"/>
+                    </constraints>
+                    <state key="normal" title="creatRunLoopBtn"/>
+                    <connections>
+                        <action selector="creatRunLoopAction:" destination="-1" eventType="touchUpInside" id="K6o-tT-qO4"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yHU-4z-YP6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="EXg-aH-QQf"/>
+                <constraint firstItem="yHU-4z-YP6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ka7-nt-fBj"/>
+            </constraints>
+            <point key="canvasLocation" x="-34" y="19"/>
         </view>
     </objects>
 </document>
