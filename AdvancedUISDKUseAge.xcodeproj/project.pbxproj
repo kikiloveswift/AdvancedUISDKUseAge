@@ -293,13 +293,6 @@
 			path = MM;
 			sourceTree = "<group>";
 		};
-		FC99817020073346004EA49E /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Libraries;
-			sourceTree = "<group>";
-		};
 		FC998176200737E3004EA49E /* RunloopVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,7 +351,6 @@
 			children = (
 				FCB708281FBDCD9A0094A903 /* AppDelegate.h */,
 				FCB708291FBDCD9A0094A903 /* AppDelegate.m */,
-				FC99817020073346004EA49E /* Libraries */,
 				FC66B4611FF0C57D0095E283 /* Delegate */,
 				FC97172F1FD904A0007F4027 /* MM */,
 				FC21DD171FBED2160003903A /* VC */,

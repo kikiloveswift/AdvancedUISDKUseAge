@@ -129,8 +129,18 @@ typedef struct
     int result = pthread_equal(thread1, runloop->_pthread);
     NSLog(@"result is %d",result);
     
+//    pthread_t thread2 = NULL;
+//    pthread_attr_t attr;
+//    pthread_attr_init(&attr);
+//    pthread_attr_setschedparam(attr, <#const struct sched_param *restrict _Nonnull#>)
+//
+//    int res = pthread_create(thread2, <#const pthread_attr_t *restrict _Nullable#>, <#void * _Nullable (* _Nonnull)(void * _Nullable)#>, <#void *restrict _Nullable#>)
 }
 
+- (void)runThread2:(void *)obj
+{
+    
+}
 
 
 
