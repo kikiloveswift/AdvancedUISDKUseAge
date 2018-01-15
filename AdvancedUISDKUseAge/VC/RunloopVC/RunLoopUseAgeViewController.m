@@ -128,17 +128,16 @@ typedef struct
     pthread_t thread1 = pthread_self();
     int result = pthread_equal(thread1, runloop->_pthread);
     NSLog(@"result is %d",result);
-    
-//    pthread_t thread2 = NULL;
-//    pthread_attr_t attr;
-//    pthread_attr_init(&attr);
-//    pthread_attr_setschedparam(attr, <#const struct sched_param *restrict _Nonnull#>)
-//
-//    int res = pthread_create(thread2, <#const pthread_attr_t *restrict _Nullable#>, <#void * _Nullable (* _Nonnull)(void * _Nullable)#>, <#void *restrict _Nullable#>)
+    NSThread *thread2 = [[NSThread alloc] initWithTarget:self selector:@selector(runThread2) object:nil];
+    thread2.name = @"kongThread2";
+    [thread2 start];
 }
 
-- (void)runThread2:(void *)obj
+- (void)runThread2
 {
+    CFRunLoopRef runloop1 = CFRunLoopGetMain();
+    CFRunLoopRef runloop2 = CFRunLoopGetCurrent();
+    int result = pthread_equal(runloop1->_pthread, runloop2->_pthread);
     
 }
 
