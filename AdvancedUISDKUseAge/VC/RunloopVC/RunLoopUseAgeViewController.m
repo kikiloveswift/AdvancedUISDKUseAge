@@ -9,7 +9,6 @@
 #import "RunLoopUseAgeViewController.h"
 #include <mach/mach_time.h>
 #import <pthread.h>
-
 typedef struct __CFRuntimeBase {
     uintptr_t _cfisa;
     uint8_t _cfinfo[4];
@@ -121,6 +120,23 @@ typedef struct
     
     [self creatARunloop];
 }
+void cleanup(void *arg){
+    printf("cleanup: %s/n",(char *)arg);
+}
+
+void *pthreadCreat(void *arg)
+{
+    pthread_t pthread_new = pthread_self();
+    
+    pthread_cleanup_push(cleanup, "first handel1");
+    
+    pthread_cleanup_push(cleanup, "first handel2");
+    
+    pthread_cleanup_pop(1);
+    pthread_cleanup_pop(1);
+    return (void *)1;
+}
+
 
 - (void)creatARunloop
 {
@@ -128,10 +144,21 @@ typedef struct
     pthread_t thread1 = pthread_self();
     int result = pthread_equal(thread1, runloop->_pthread);
     NSLog(@"result is %d",result);
+    
+
+    
     NSThread *thread2 = [[NSThread alloc] initWithTarget:self selector:@selector(runThread2) object:nil];
     thread2.name = @"kongThread2";
     [thread2 start];
+    pthread_t thread3;
+    pthread_mutex_t count_mutex = PTHREAD_MUTEX_INITIALIZER;
+    pthread_mutex_lock(&count_mutex);
+    pthread_create(&thread3, NULL, pthreadCreat, (void*)1);
+    pthread_mutex_unlock(&count_mutex);
+    
+
 }
+
 
 - (void)runThread2
 {
@@ -141,6 +168,16 @@ typedef struct
     
 }
 
+- (IBAction)printAllProperty:(id)sender
+{
+    
+    
+    
+    
+    
+    
+    
+}
 
 
 @end

@@ -31,11 +31,25 @@
                         <action selector="creatRunLoopAction:" destination="-1" eventType="touchUpInside" id="K6o-tT-qO4"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYu-EP-tve">
+                    <rect key="frame" x="229" y="341" width="156" height="54"/>
+                    <color key="backgroundColor" red="1" green="0.78258213799999998" blue="0.38403388589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="L4g-fS-qBG"/>
+                        <constraint firstAttribute="width" constant="156" id="MEd-bC-ie5"/>
+                    </constraints>
+                    <state key="normal" title="all properties"/>
+                    <connections>
+                        <action selector="printAllProperty:" destination="-1" eventType="touchUpInside" id="rD6-GA-IK6"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="jYu-EP-tve" secondAttribute="trailing" constant="29" id="5Yy-9w-xKB"/>
                 <constraint firstItem="yHU-4z-YP6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="EXg-aH-QQf"/>
                 <constraint firstItem="yHU-4z-YP6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ka7-nt-fBj"/>
+                <constraint firstItem="jYu-EP-tve" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nmq-tH-AhH"/>
             </constraints>
             <point key="canvasLocation" x="-34" y="19"/>
         </view>
