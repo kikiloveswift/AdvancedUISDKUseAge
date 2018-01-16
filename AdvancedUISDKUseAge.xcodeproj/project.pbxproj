@@ -146,6 +146,7 @@
 		FCB862B42005FBAD00DF84F0 /* PresentAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentAnimator.m; sourceTree = "<group>"; };
 		FCB862B720060C5600DF84F0 /* ViewTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewTexture.h; sourceTree = "<group>"; };
 		FCB862B820060C5600DF84F0 /* ViewTexture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewTexture.m; sourceTree = "<group>"; };
+		FCDD773D200DFBCB006601F7 /* AdvancedUISDKUseAge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdvancedUISDKUseAge.entitlements; sourceTree = "<group>"; };
 		FCE793181FE7A5890075ABA9 /* NSObject+PrintAllProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+PrintAllProperty.h"; sourceTree = "<group>"; };
 		FCE793191FE7A5890075ABA9 /* NSObject+PrintAllProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PrintAllProperty.m"; sourceTree = "<group>"; };
 		FCF163371FEA33C100789D15 /* ExchangeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExchangeViewController.h; sourceTree = "<group>"; };
@@ -349,6 +350,7 @@
 		FCB708271FBDCD9A0094A903 /* AdvancedUISDKUseAge */ = {
 			isa = PBXGroup;
 			children = (
+				FCDD773D200DFBCB006601F7 /* AdvancedUISDKUseAge.entitlements */,
 				FCB708281FBDCD9A0094A903 /* AppDelegate.h */,
 				FCB708291FBDCD9A0094A903 /* AppDelegate.m */,
 				FC66B4611FF0C57D0095E283 /* Delegate */,
@@ -557,6 +559,11 @@
 					FCB708241FBDCD9A0094A903 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FCB7083C1FBDCD9A0094A903 = {
 						CreatedOnToolsVersion = 9.0;
@@ -875,6 +882,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_ENTITLEMENTS = AdvancedUISDKUseAge/AdvancedUISDKUseAge.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ML9NWM8SSX;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -921,6 +929,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_ENTITLEMENTS = AdvancedUISDKUseAge/AdvancedUISDKUseAge.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ML9NWM8SSX;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

@@ -124,13 +124,16 @@ void cleanup(void *arg){
     printf("cleanup: %s/n",(char *)arg);
 }
 
+void cleanup2(void *arg){
+    printf("cleanup: %s/n",(char *)arg);
+}
 void *pthreadCreat(void *arg)
 {
     pthread_t pthread_new = pthread_self();
     
     pthread_cleanup_push(cleanup, "first handel1");
     
-    pthread_cleanup_push(cleanup, "first handel2");
+    pthread_cleanup_push(cleanup2, "first handel2");
     
     pthread_cleanup_pop(1);
     pthread_cleanup_pop(1);
